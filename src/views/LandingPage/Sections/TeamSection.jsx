@@ -18,7 +18,7 @@ import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/t
 
 import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import team3 from "assets/img/faces/dai.jpg";
 
 class TeamSection extends React.Component {
   render() {
@@ -83,7 +83,7 @@ class TeamSection extends React.Component {
                   Farid Hammouten
                   <br />
                   <small className={classes.smallTitle}>
-                    JavaScript Developer
+                    JavaScript Engineer
                   </small>
                 </h4>
                 <CardBody>
@@ -132,7 +132,7 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Dai Phan Tran
                   <br />
-                  <small className={classes.smallTitle}>Designer</small>
+                  <small className={classes.smallTitle}>Web Designer</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
@@ -144,6 +144,8 @@ class TeamSection extends React.Component {
                     justIcon
                     color="transparent"
                     className={classes.margin5}
+                    href="http://www.twitter.com/dai_webdesign"
+                    target="_blank"
                   >
     
                     <i className={classes.socials + " fab fa-twitter"} />
@@ -152,13 +154,8 @@ class TeamSection extends React.Component {
                     justIcon
                     color="transparent"
                     className={classes.margin5}
-                  >
-                    <i className={classes.socials + " fab fa-instagram"} />
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
+                    href="http://www.facebook.com/dai.webdesign"
+                    target="_blank"
                   >
                     <i className={classes.socials + " fab fa-facebook"} />
                   </Button>

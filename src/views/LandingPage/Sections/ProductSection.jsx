@@ -22,11 +22,14 @@ class ProductSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Let's talk product</h2>
             <h5 className={classes.description}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
+              I am based in France, I love challenges and meeting new people,
+              I believe that images are better than words to express myself,
+              I am an open minded person who loves learning new things
+              and I can't wait to work with your in the future.
             </h5>
           </GridItem>
         </GridContainer>
-        <div>
+      <div>
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea

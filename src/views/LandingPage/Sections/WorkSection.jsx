@@ -26,9 +26,15 @@ class WorkSection extends React.Component {
               hours.
             </h4>
           </GridItem>
-          <GridItem justify="center">
-            <Button xs={12} sm={12} md={6}>
-              Go
+          <GridItem xs={12} sm={12} md={12}>
+            <Button 
+              variant="contained" 
+              color="primary" 
+              className={classes.button}
+              href="https://join.slack.com/t/asmuchnantoka/shared_invite/enQtNDk3OTMyMjY1MzkzLTA2YTc0Y2YzZWE5NGZlMmQyODJkMjEzY2ZjYzZiZmY2NTdmNDg2ODQzMDdlYWEyNDRiOGI4OWM1MjY2ZWI5YWU"
+              target="_blank"
+            >
+              Go to Slack
             </Button>
           </GridItem>
         </GridContainer>
