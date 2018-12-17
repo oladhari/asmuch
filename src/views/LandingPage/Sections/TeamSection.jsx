@@ -16,8 +16,8 @@ import CardFooter from "components/Card/CardFooter.jsx";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
+import team1 from "assets/img/faces/jesse.jpg";
+import team2 from "assets/img/faces/farid.jpg";
 import team3 from "assets/img/faces/kendall.jpg";
 
 class TeamSection extends React.Component {
@@ -36,19 +36,20 @@ class TeamSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team1} alt="..." className={imageClasses} />
+                  <img src={team1} alt="Jesse" className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Gigi Hadid
+                  Jesse Katsumata
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>
+                    Full Stack Developer
+                  </small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    Full Stack developer based in Tokyo. Strong believer in the
+                    power of javascript. Tech Stack: React, React-Native, Node,
+                    Electron, Mongo, Express
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -79,19 +80,20 @@ class TeamSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team2} alt="..." className={imageClasses} />
+                  <img src={team2} alt="Farid" className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Christian Louboutin
+                  Farid Hammouten
                   <br />
-                  <small className={classes.smallTitle}>Designer</small>
+                  <small className={classes.smallTitle}>
+                    JavaScript Developer
+                  </small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    Junior JavaScript Developer based in Osaka. Big Dreamer and
+                    and love to share and exchange kwonledge. Tech Stack:
+                    JavaScript, Node, React, (Express, Mongo)
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -99,6 +101,8 @@ class TeamSection extends React.Component {
                     justIcon
                     color="transparent"
                     className={classes.margin5}
+                    href="https://twitter.com/Faridh212"
+                    target="_blank"
                   >
                     <i className={classes.socials + " fab fa-twitter"} />
                   </Button>
@@ -115,19 +119,19 @@ class TeamSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team3} alt="..." className={imageClasses} />
+                  <img src={team3} alt="Dai" className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Kendall Jenner
+                  Dai Phan Tran
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Designer</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
                     You can write here details about one of your team members.
                     You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    add some for people to be able to follow them outside the
+                    site.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
