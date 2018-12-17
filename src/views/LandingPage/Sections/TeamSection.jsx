@@ -57,6 +57,8 @@ class TeamSection extends React.Component {
                     justIcon
                     color="transparent"
                     className={classes.margin5}
+                    href="https://twitter.com/natural_clar"
+                    target="_blank"
                   >
                     <i className={classes.socials + " fab fa-twitter"} />
                   </Button>
@@ -64,15 +66,10 @@ class TeamSection extends React.Component {
                     justIcon
                     color="transparent"
                     className={classes.margin5}
+                    href="https://github.com/Naturalclar"
+                    target="_blank"
                   >
-                    <i className={classes.socials + " fab fa-instagram"} />
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <i className={classes.socials + " fab fa-facebook"} />
+                    <i className={classes.socials + " fab fa-github"} />
                   </Button>
                 </CardFooter>
               </Card>
@@ -110,8 +107,19 @@ class TeamSection extends React.Component {
                     justIcon
                     color="transparent"
                     className={classes.margin5}
+                    href="https://github.com/farid212"
+                    target="_blank"
                   >
-                    <i className={classes.socials + " fab fa-linkedin"} />
+                    <i className={classes.socials + " fab fa-github"} />
+                  </Button>
+                  <Button
+                    justIcon
+                    color="transparent"
+                    className={classes.margin5}
+                    href="https://medium.com/@farid212"
+                    target="_blank"
+                  >
+                    <i className={classes.socials + " fab fa-medium"} />
                   </Button>
                 </CardFooter>
               </Card>
@@ -128,10 +136,7 @@ class TeamSection extends React.Component {
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some for people to be able to follow them outside the
-                    site.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -140,6 +145,7 @@ class TeamSection extends React.Component {
                     color="transparent"
                     className={classes.margin5}
                   >
+    
                     <i className={classes.socials + " fab fa-twitter"} />
                   </Button>
                   <Button
