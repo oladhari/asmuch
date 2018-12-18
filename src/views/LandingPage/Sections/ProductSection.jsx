@@ -20,12 +20,13 @@ class ProductSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Let's talk product</h2>
+            <h2 className={classes.title}>Let's talk About this concept</h2>
             <h5 className={classes.description}>
-              I am based in France, I love challenges and meeting new people,
-              I believe that images are better than words to express myself,
-              I am an open minded person who loves learning new things
-              and I can't wait to work with your in the future.
+              Because we all start as Junior sometimes we get block and give up, So we decide to create this concepte were
+              beginner could get help in real chat and even get mentorised by other people who have gor more
+              experience.<br/>
+              As much 何とか mean As much somethings...<br/>
+              as much you give as much you will receive.
             </h5>
           </GridItem>
         </GridContainer>

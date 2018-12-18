@@ -88,9 +88,9 @@ class TeamSection extends React.Component {
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    Junior JavaScript Developer based in Osaka. Big Dreamer and
+                    Junior JavaScript Engineer based in Osaka. Big Dreamer and
                     and love to share and exchange kwonledge. Tech Stack:
-                    JavaScript, Node, React, (Express, Mongo)
+                    JavaScript, Node, React, (start: Express & Mongo)
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -136,7 +136,9 @@ class TeamSection extends React.Component {
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
+                  Junior Web Designer based in France, I love challenges and meeting new people,
+                  I believe that images are better than words to express myself,
+                  I am an open minded person who loves learning and Echange new things.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>

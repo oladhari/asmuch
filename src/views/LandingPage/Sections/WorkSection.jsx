@@ -9,6 +9,7 @@ import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
+
 import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx";
 
 class WorkSection extends React.Component {
@@ -26,11 +27,15 @@ class WorkSection extends React.Component {
               hours.
             </h4>
           </GridItem>
-          <GridItem xs={12} sm={12} md={12}>
-            <Button 
+          <GridItem 
+            container
+            direction="row"
+            justify="center"
+            alignItems="center"
+          >
+            <Button
               variant="contained" 
               color="primary" 
-              className={classes.button}
               href="https://join.slack.com/t/asmuchnantoka/shared_invite/enQtNDk3OTMyMjY1MzkzLTA2YTc0Y2YzZWE5NGZlMmQyODJkMjEzY2ZjYzZiZmY2NTdmNDg2ODQzMDdlYWEyNDRiOGI4OWM1MjY2ZWI5YWU"
               target="_blank"
             >
