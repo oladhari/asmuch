@@ -21,16 +21,6 @@ function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
     <List className={classes.list}>
-      {/* <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/material-kit-react"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
-      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
@@ -80,6 +70,25 @@ function HeaderLinks({ ...props }) {
           >
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
+        </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="githup-tooltip"
+          title="follow us on github"
+          placement={window.innerWidth > 959 ? "top" : "left"}
+          classes={{ tooltip: classes.tooltip }}
+        >
+          <Button
+            justIcon
+            color="transparent"
+            className={classes.margin5}
+            href="https://github.com/asmuch"
+            target="_blank"
+          >
+            <i className={classes.socials + " fab fa-github"} />
+          </Button>
+
         </Tooltip>
       </ListItem>
     </List>

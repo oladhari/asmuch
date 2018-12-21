@@ -11,7 +11,7 @@ import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+// import Button from "components/CustomButtons/Button.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 
@@ -43,23 +43,12 @@ class LandingPage extends React.Component {
         />
         <Parallax filter image={require("assets/img/bg8.jpg")}>
           <div className={classes.container}>
-            <GridContainer>
-              <GridItem xs={12} sm={12} md={6}>
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={8}>
                 <h1 className={classes.title}>Your Story Starts With Us.</h1>
                 <h4>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
                 </h4>
-                <br />
-                <Button
-                  color="danger"
-                  size="lg"
-                  href="https://youtu.be/w7xFH8e9ttM"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fas fa-play" />
-                  Watch video
-                </Button>
               </GridItem>
             </GridContainer>
           </div>

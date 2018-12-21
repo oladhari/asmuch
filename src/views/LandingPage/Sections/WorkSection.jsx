@@ -21,10 +21,7 @@ class WorkSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Let's share your knowledge</h2>
             <h4 className={classes.description}>
-              Divide details about your product or agency work into parts. Write
-              a few lines about each one and contact us about any further
-              collaboration. We will responde get back to you in a couple of
-              hours.
+              Join our communit of knowledge exchange and make better web by helping and being helped, make your fingerprinted on the web by our side.
             </h4>
           </GridItem>
           <GridItem 
