@@ -44,11 +44,11 @@ class LandingPage extends React.Component {
         <Parallax filter image={require("assets/img/bg8.jpg")}>
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8}>
-                <h1 className={classes.title}>Your Story Starts With Us.</h1>
-                <h4>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley 
-                </h4>
+              <GridItem xs={12} sm={12} md={7}>
+                <h1 className={classes.title}>Asmuch, commitment through community.</h1>
+                <h3>
+                A rare place to find rare people, who are willing to do hard thinking, to work together and learn.
+                </h3>
               </GridItem>
             </GridContainer>
           </div>
