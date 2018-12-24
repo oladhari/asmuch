@@ -44,7 +44,7 @@ class LandingPage extends React.Component {
         <Parallax filter image={require("assets/img/bg8.jpg")}>
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={7}>
+              <GridItem xs={12} sm={12} md={12}>
                 <h1 className={classes.title}>Asmuch, commitment through community.</h1>
                 <h3>
                 A rare place to find rare people, who are willing to do hard thinking, to work together and learn.
