@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -7,14 +8,14 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
+import GridContainer from "components/Grid/GridContainer";
+import GridItem from "components/Grid/GridItem";
+import Button from "components/CustomButtons/Button";
+import Card from "components/Card/Card";
+import CardBody from "components/Card/CardBody";
+import CardFooter from "components/Card/CardFooter";
 
-import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
+import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
 import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
@@ -136,9 +137,10 @@ class TeamSection extends React.Component {
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                  Junior Web Designer based in France, I love challenges and meeting new people,
-                  I believe that images are better than words to express myself,
-                  I am an open minded person who loves learning and Echange new things.
+                    Junior Web Designer based in France, I love challenges and
+                    meeting new people, I believe that images are better than
+                    words to express myself, I am an open minded person who
+                    loves learning and Echange new things.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -149,7 +151,6 @@ class TeamSection extends React.Component {
                     href="http://www.twitter.com/dai_webdesign"
                     target="_blank"
                   >
-    
                     <i className={classes.socials + " fab fa-twitter"} />
                   </Button>
                   <Button
@@ -170,5 +171,9 @@ class TeamSection extends React.Component {
     );
   }
 }
+
+TeamSection.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.string)
+};
 
 export default withStyles(teamStyle)(TeamSection);

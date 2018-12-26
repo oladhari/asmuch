@@ -19,8 +19,12 @@ module.exports = {
   },
   rules: {
     "no-console": "warn",
+    // will want to fix this in the future
+    "react/no-string-refs": "warn",
+    // will want to fix this in the future
+    "no-unused-vars": "warn",
     "import/extensions": [
-      2,
+      "error",
       { js: "never", jsx: "never", jpg: "ignore", css: "ignore" }
     ]
   },
