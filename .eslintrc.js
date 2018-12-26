@@ -12,10 +12,23 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ["react"],
+  settings: {
+    react: {
+      version: "16.5.2"
+    }
+  },
+  rules: {
+    "no-console": "warn",
+    "import/extensions": [
+      2,
+      { js: "never", jsx: "never", jpg: "ignore", css: "ignore" }
+    ]
+  },
+  plugins: ["react", "import"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier/react"
   ]
 };
