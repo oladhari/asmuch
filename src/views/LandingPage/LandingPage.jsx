@@ -7,20 +7,20 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-// import Button from "components/CustomButtons/Button.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
+import GridContainer from "components/Grid/GridContainer";
+import GridItem from "components/Grid/GridItem";
+// import Button from "components/CustomButtons/Button";
+import HeaderLinks from "components/Header/HeaderLinks";
+import Parallax from "components/Parallax/Parallax";
 
-import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
+import landingPageStyle from "assets/jss/material-kit-react/views/landingPage";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.jsx";
-import TeamSection from "./Sections/TeamSection.jsx";
-import WorkSection from "./Sections/WorkSection.jsx";
+import ProductSection from "./Sections/ProductSection";
+import TeamSection from "./Sections/TeamSection";
+import WorkSection from "./Sections/WorkSection";
 
 const dashboardRoutes = [];
 
@@ -45,9 +45,12 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={12}>
-                <h1 className={classes.title}>Asmuch, commitment through community.</h1>
+                <h1 className={classes.title}>
+                  Asmuch, commitment through community.
+                </h1>
                 <h3>
-                A rare place to find rare people, who are willing to do hard thinking, to work together and learn.
+                  A rare place to find rare people, who are willing to do hard
+                  thinking, to work together and learn.
                 </h3>
               </GridItem>
             </GridContainer>

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
-import typographyStyle from "assets/jss/material-kit-react/components/typographyStyle.jsx";
+import typographyStyle from "assets/jss/material-kit-react/components/typographyStyle";
 
 function Primary({ ...props }) {
   const { classes, children } = props;
@@ -16,7 +16,8 @@ function Primary({ ...props }) {
 }
 
 Primary.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.element.isRequired
 };
 
 export default withStyles(typographyStyle)(Primary);
