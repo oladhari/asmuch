@@ -45,8 +45,7 @@ jobs:
       - run:
         name: Deploy Master to Heroku
         command: |
-        git push https://heroku:$HEROKU_PASSWORD@git.heroku.com/asmuch.git master
-
+          git push https://heroku:$HEROKU_PASSWORD@git.heroku.com/asmuch.git master
 
 workflows:
   version: 2
