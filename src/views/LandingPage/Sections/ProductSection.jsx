@@ -25,10 +25,12 @@ class ProductSection extends React.Component {
             <h5 className={classes.description}>
               {`As much 何とか mean As much somethings...`}
               <br />
-              {`Because we all start as Junior sometimes we get block and give up,
-              So we decide to create this concepte were beginner could get help
-              in real chat and even get mentorised by other people who have gor
-              more experience.`}
+              {`"As much 何とか" mean As much somethings...
+                Because we all start as junior, sometimes we get block and give up. 
+                So we decide to create this concept where beginners could get help in real chat and even get mentorised by other people who have more experience.
+
+                As much you give,
+                as much you will receive!`}
               <br />
               {`as much you give as much you will receive.`}
             </h5>

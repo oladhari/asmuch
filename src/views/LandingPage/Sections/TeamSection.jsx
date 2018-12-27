@@ -89,9 +89,9 @@ class TeamSection extends React.Component {
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    Junior JavaScript Engineer based in Osaka. Big Dreamer and
+                    JavaScript Engineer based in Osaka. Big Dreamer and
                     and love to share and exchange kwonledge. Tech Stack:
-                    JavaScript, Node, React, (start: Express & Mongo)
+                    JavaScript, Node, React, (start Express & Mongo november 2018)
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -137,10 +137,10 @@ class TeamSection extends React.Component {
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    Junior Web Designer based in France, I love challenges and
-                    meeting new people, I believe that images are better than
-                    words to express myself, I am an open minded person who
-                    loves learning and Echange new things.
+                    Junior Web Designer based in France, love challenges and
+                    meeting new people, believe that image is better than
+                    word to express things, open minded and
+                    love learning and Exchange.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
