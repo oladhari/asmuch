@@ -17,7 +17,7 @@ function Muted({ ...props }) {
 
 Muted.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default withStyles(typographyStyle)(Muted);

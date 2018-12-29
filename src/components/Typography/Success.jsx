@@ -17,7 +17,7 @@ function Success({ ...props }) {
 
 Success.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default withStyles(typographyStyle)(Success);
