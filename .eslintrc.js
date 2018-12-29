@@ -28,9 +28,9 @@ module.exports = {
       {
         js: "never",
         jsx: "never",
-        jpg: "ignorePackages",
-        css: "ignorePackages",
-        json: "never"
+        json: "never",
+        css: "always",
+        jpg: "always"
       }
     ]
   },
