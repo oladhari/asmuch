@@ -42,9 +42,7 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Jesse Katsumata
                   <br />
-                  <small className={classes.smallTitle}>
-                    Admin
-                  </small>
+                  <small className={classes.smallTitle}>Admin</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
@@ -83,15 +81,13 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Farid Hammouten
                   <br />
-                  <small className={classes.smallTitle}>
-                    Founder
-                  </small>
+                  <small className={classes.smallTitle}>Founder</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    JavaScript Engineer based in Osaka. Big Dreamer
-                    and love to exchange knowledge. Tech Stack:
-                    JavaScript, Node, React, (start Express & Mongo november 2018)
+                    JavaScript Engineer based in Osaka. Big Dreamer and love to
+                    exchange knowledge. Tech Stack: JavaScript, Node, React,
+                    (start Express & Mongo november 2018)
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
@@ -133,15 +129,13 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Dai Phan Tran
                   <br />
-                  <small className={classes.smallTitle}>
-                    Moderator
-                  </small>
+                  <small className={classes.smallTitle}>Moderator</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
                     Open mind Web Designer based in France, love challenges and
-                    meeting new people, believe that image is better than
-                    word to express things.
+                    meeting new people, believe that image is better than word
+                    to express things.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>

@@ -29,7 +29,8 @@ class ProductSection extends React.Component {
                 So we decide to create this concept where beginners could get help in real chat and even get mentorised by other people who have more experience.
               `}
               <br />
-              {`As much you give,`}<br />
+              {`As much you give,`}
+              <br />
               {`as much you will receive!`}
             </h5>
           </GridItem>

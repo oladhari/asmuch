@@ -27,7 +27,11 @@ class WorkSection extends React.Component {
             </h4>
             <h3 className={classes.title}>{`Please don't forget to:`}</h3>
             <ul className={classes.description}>
-              <li>{`Introduce yourself into the `}<b>{`#general`}</b>{` channel`}</li>
+              <li>
+                {`Introduce yourself into the `}
+                <b>{`#general`}</b>
+                {` channel`}
+              </li>
               <li>{`explain how you can help others`}</li>
               <li>{`then ask help you need and connect to right #channel`}</li>
             </ul>
