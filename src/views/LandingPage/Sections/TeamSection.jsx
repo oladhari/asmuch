@@ -43,7 +43,7 @@ class TeamSection extends React.Component {
                   Jesse Katsumata
                   <br />
                   <small className={classes.smallTitle}>
-                    Full Stack Developer
+                    Admin
                   </small>
                 </h4>
                 <CardBody>
@@ -84,13 +84,13 @@ class TeamSection extends React.Component {
                   Farid Hammouten
                   <br />
                   <small className={classes.smallTitle}>
-                    JavaScript Engineer
+                    Founder
                   </small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    JavaScript Engineer based in Osaka. Big Dreamer and
-                    and love to share and exchange kwonledge. Tech Stack:
+                    JavaScript Engineer based in Osaka. Big Dreamer
+                    and love to exchange knowledge. Tech Stack:
                     JavaScript, Node, React, (start Express & Mongo november 2018)
                   </p>
                 </CardBody>
@@ -133,14 +133,15 @@ class TeamSection extends React.Component {
                 <h4 className={classes.cardTitle}>
                   Dai Phan Tran
                   <br />
-                  <small className={classes.smallTitle}>Web Designer</small>
+                  <small className={classes.smallTitle}>
+                    Moderator
+                  </small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    Junior Web Designer based in France, love challenges and
+                    Open mind Web Designer based in France, love challenges and
                     meeting new people, believe that image is better than
-                    word to express things, open minded and
-                    love learning and Exchange.
+                    word to express things.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>

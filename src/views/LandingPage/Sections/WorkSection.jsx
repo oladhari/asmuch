@@ -25,6 +25,12 @@ class WorkSection extends React.Component {
               helping and being helped, make your fingerprinted on the web by
               our side.`}
             </h4>
+            <h3 className={classes.title}>{`Please don't forget to:`}</h3>
+            <ul className={classes.description}>
+              <li>{`Introduce yourself into the `}<b>{`#general`}</b>{` channel`}</li>
+              <li>{`explain how you can help others`}</li>
+              <li>{`then ask help you need and connect to right #channel`}</li>
+            </ul>
           </GridItem>
           <GridItem
             container

@@ -25,14 +25,12 @@ class ProductSection extends React.Component {
             <h5 className={classes.description}>
               {`As much 何とか mean As much somethings...`}
               <br />
-              {`"As much 何とか" mean As much somethings...
-                Because we all start as junior, sometimes we get block and give up. 
+              {`Because we all start as junior, sometimes we get block and give up. 
                 So we decide to create this concept where beginners could get help in real chat and even get mentorised by other people who have more experience.
-
-                As much you give,
-                as much you will receive!`}
+              `}
               <br />
-              {`as much you give as much you will receive.`}
+              {`As much you give,`}<br />
+              {`as much you will receive!`}
             </h5>
           </GridItem>
         </GridContainer>
@@ -41,7 +39,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Free Chat"
-                description="blablabla text to write blablabla"
+                description="Slack is a place where you can collaborate, exchange informations, knowledges with the right peoples and maybe find new collaborator based on real skills."
                 icon={Chat}
                 iconColor="info"
                 vertical
@@ -50,7 +48,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Verified Users"
-                description="blablabla text to write blablabla"
+                description="To prevent spam accounts, we often exchange with poeple just to verify that a user is human. We don't need to verify their identity as long the moderators approved the answers."
                 icon={VerifiedUser}
                 iconColor="success"
                 vertical
