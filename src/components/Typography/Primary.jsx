@@ -17,7 +17,7 @@ function Primary({ ...props }) {
 
 Primary.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.element.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default withStyles(typographyStyle)(Primary);

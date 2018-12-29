@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -68,5 +69,9 @@ class LandingPage extends React.Component {
     );
   }
 }
+
+LandingPage.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.string)
+};
 
 export default withStyles(landingPageStyle)(LandingPage);
