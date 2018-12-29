@@ -25,7 +25,13 @@ module.exports = {
     "no-unused-vars": "warn",
     "import/extensions": [
       "error",
-      { js: "never", jsx: "never", jpg: "ignore", css: "ignore" }
+      {
+        js: "never",
+        jsx: "never",
+        jpg: "ignorePackages",
+        css: "ignorePackages",
+        json: "never"
+      }
     ]
   },
   plugins: ["react", "import"],
