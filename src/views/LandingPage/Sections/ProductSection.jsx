@@ -58,7 +58,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Fingerprint"
-                description="blablabla text to write blablabla"
+                description="Doing what you love, Spread happiness, Encourage others, Love the worlds, Share your words are 5 mains ways that you can leave your fingerprint on web, so let's start your story by our side."
                 icon={Fingerprint}
                 iconColor="danger"
                 vertical
