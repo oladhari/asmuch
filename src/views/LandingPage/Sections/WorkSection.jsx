@@ -17,7 +17,7 @@ console.log(workStyle);
 class WorkSection extends React.Component {
   render() {
     const { classes } = this.props;
-    console.log(classes)
+    console.log(classes);
     return (
       <div className={classes.section}>
         <GridContainer justify="center">
@@ -31,7 +31,7 @@ class WorkSection extends React.Component {
               our side.`}
             </h4>
             <h3 className={classes.title}>
-              {`Please do not forget into GENERAL channel to:`}
+              {`When you join, please perform the following in GENERAL channel:`}
             </h3>
             <ul className={classes.textLeft}>
               <li>{`Introduce yourself`}</li>
