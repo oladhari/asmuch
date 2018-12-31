@@ -17,7 +17,16 @@ const workStyle = {
     textAlign: "center"
   },
   textCenter: {
-    textAlign: "center"
+    textAlign: "center",
+    color: "#999"
+  },
+  textLeft: {
+    textAlign: "left",
+    color: "#999"
+  },
+  textRight: {
+    textAlign: "right",
+    color: "#999"
   },
   textArea: {
     marginRight: "15px",
