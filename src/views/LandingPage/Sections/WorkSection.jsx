@@ -19,9 +19,7 @@ class WorkSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>
-              {`Let's share your knowledge`}
-            </h2>
+            <h2 className={classes.title}>{`Let's share your knowledge`}</h2>
             <h4 className={classes.description}>
               {`Join our communit of knowledge exchange and make better web by
               helping and being helped, make your fingerprinted on the web by
@@ -34,7 +32,9 @@ class WorkSection extends React.Component {
               <li>{`Introduce yourself`}</li>
               <li>{`explain what and how you can help others`}</li>
               <li>{`then ask help you would like to have`}</li>
-              <li>{`As much you help this community, As much you will received from it...`}</li>
+              <li>
+                {`As much you help this community, As much you will received from it...`}
+              </li>
             </ul>
           </GridItem>
           <GridItem
