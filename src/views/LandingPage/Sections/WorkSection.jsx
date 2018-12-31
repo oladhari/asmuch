@@ -12,12 +12,9 @@ import Button from "components/CustomButtons/Button";
 
 import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle";
 
-console.log(workStyle);
-
 class WorkSection extends React.Component {
   render() {
     const { classes } = this.props;
-    console.log(classes);
     return (
       <div className={classes.section}>
         <GridContainer justify="center">
