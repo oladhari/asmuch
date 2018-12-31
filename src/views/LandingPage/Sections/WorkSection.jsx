@@ -22,13 +22,17 @@ class WorkSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>{`Let's share your knowledge`}</h2>
+            <h2 className={classes.title}>
+              {`Let's share your knowledge`}
+            </h2>
             <h4 className={classes.description}>
               {`Join our communit of knowledge exchange and make better web by
               helping and being helped, make your fingerprinted on the web by
               our side.`}
             </h4>
-            <h3 className={classes.title}>{`Please do not forget into GENERAL channel to:`}</h3>
+            <h3 className={classes.title}>
+              {`Please do not forget into GENERAL channel to:`}
+            </h3>
             <ul className={classes.textLeft}>
               <li>{`Introduce yourself`}</li>
               <li>{`explain what and how you can help others`}</li>
