@@ -23,7 +23,7 @@ class ProductSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>{`Let's talk About this concept`}</h2>
             <h5 className={classes.description}>
-              {`As much 何とか mean As much somethings...`}
+              {`As much 何とか mean As much something...`}
               <br />
               {`Because we all start as junior, sometimes we get block and give up. 
                 So we decide to create this concept where beginners could get help in real chat and even get mentorised by other people who have more experience.
@@ -40,7 +40,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Free Chat"
-                description="Slack is a place where you can collaborate, exchange informations, knowledges with the right peoples and maybe find new collaborator based on real skills."
+                description="Slack is a place where you can collaborate, exchange informations, knowledge with the right people and maybe find new collaborator based on real skills."
                 icon={Chat}
                 iconColor="info"
                 vertical
