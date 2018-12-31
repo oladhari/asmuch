@@ -6,4 +6,4 @@ Community for people who are willing to help eachother to learn code.
 ## Member
 - [Farid212](https://github.com/Farid212) - **Farid Hammouten**
 - [Naturalclar](https://github.com/Naturalclar) - **Jesse Katsumata**
-- **Dai Phan Tran**
+- [Phantrandai](https://github.com/phantrandai) - **Dai Phan Tran**

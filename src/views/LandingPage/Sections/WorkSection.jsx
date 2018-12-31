@@ -12,9 +12,12 @@ import Button from "components/CustomButtons/Button";
 
 import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle";
 
+console.log(workStyle);
+
 class WorkSection extends React.Component {
   render() {
     const { classes } = this.props;
+    console.log(classes)
     return (
       <div className={classes.section}>
         <GridContainer justify="center">
@@ -25,15 +28,12 @@ class WorkSection extends React.Component {
               helping and being helped, make your fingerprinted on the web by
               our side.`}
             </h4>
-            <h3 className={classes.title}>{`Please don't forget to:`}</h3>
-            <ul className={classes.description}>
-              <li>
-                {`Introduce yourself into the `}
-                <b>{`#general`}</b>
-                {` channel`}
-              </li>
-              <li>{`explain how you can help others`}</li>
-              <li>{`then ask help you need and connect to right #channel`}</li>
+            <h3 className={classes.title}>{`Please do not forget into GENERAL channel to:`}</h3>
+            <ul className={classes.textLeft}>
+              <li>{`Introduce yourself`}</li>
+              <li>{`explain what and how you can help others`}</li>
+              <li>{`then ask help you would like to have`}</li>
+              <li>{`As much you help this community, As much you will received from it...`}</li>
             </ul>
           </GridItem>
           <GridItem
