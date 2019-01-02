@@ -49,7 +49,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Verified Users"
-                description="To prevent spam accounts, we often exchange with poeple just to verify that a user is human. We don't need to verify their identity as long the moderators approved the answers."
+                description="To prevent spam accounts, we often exchange with people just to verify that a user is human. We don't need to verify their identity as long the moderators approved the answers."
                 icon={VerifiedUser}
                 iconColor="success"
                 vertical
