@@ -12,7 +12,7 @@ import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-// import Button from "components/CustomButtons/Button";
+import Button from "components/CustomButtons/Button";
 import HeaderLinks from "components/Header/HeaderLinks";
 import Parallax from "components/Parallax/Parallax";
 
@@ -51,8 +51,27 @@ class LandingPage extends React.Component {
                 </h1>
                 <h3>
                   A rare place to find rare people, who are willing to do hard
-                  thinking, to work together and learn.
+                  thinking, to work together and to learn.
                 </h3>
+              </GridItem>
+            </GridContainer>
+            <br/>
+            <GridContainer justify="center">
+            <GridItem xs={12} sm={12} md={12}
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+              >
+                <Button
+                  variant="contained"
+                  color="info"
+                  href="https://join.slack.com/t/asmuchnantoka/shared_invite/enQtNDk3OTMyMjY1MzkzLTA2YTc0Y2YzZWE5NGZlMmQyODJkMjEzY2ZjYzZiZmY2NTdmNDg2ODQzMDdlYWEyNDRiOGI4OWM1MjY2ZWI5YWU"
+                  target="_blank"
+                  size="lg"
+                >
+                  Direct connect to Slack's Community
+                </Button>
               </GridItem>
             </GridContainer>
           </div>

@@ -45,11 +45,12 @@ class WorkSection extends React.Component {
           >
             <Button
               variant="contained"
-              color="primary"
+              color="warning"
               href="https://join.slack.com/t/asmuchnantoka/shared_invite/enQtNDk3OTMyMjY1MzkzLTA2YTc0Y2YzZWE5NGZlMmQyODJkMjEzY2ZjYzZiZmY2NTdmNDg2ODQzMDdlYWEyNDRiOGI4OWM1MjY2ZWI5YWU"
               target="_blank"
+              size="lg"
             >
-              Go to Slack
+              Connect to Slack
             </Button>
           </GridItem>
         </GridContainer>
