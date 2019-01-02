@@ -55,9 +55,12 @@ class LandingPage extends React.Component {
                 </h3>
               </GridItem>
             </GridContainer>
-            <br/>
+            <br />
             <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={12}
+              <GridItem
+                xs={12}
+                sm={12}
+                md={12}
                 container
                 direction="row"
                 justify="center"
@@ -70,7 +73,7 @@ class LandingPage extends React.Component {
                   target="_blank"
                   size="lg"
                 >
-                  Direct connect to Slack's Community
+                  Direct connect to Slack Community
                 </Button>
               </GridItem>
             </GridContainer>
