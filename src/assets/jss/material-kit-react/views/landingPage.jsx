@@ -1,4 +1,5 @@
 import { container, title } from "assets/jss/material-kit-react";
+import theme from "assets/jss/material-kit-react/views/componentsSections/theme";
 
 const landingPageStyle = {
   container: {
@@ -10,6 +11,9 @@ const landingPageStyle = {
     ...title,
     display: "inline-block",
     position: "relative",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem"
+    },
     marginTop: "30px",
     minHeight: "32px",
     color: "#FFFFFF",
@@ -18,7 +22,10 @@ const landingPageStyle = {
   subtitle: {
     fontSize: "1.313rem",
     maxWidth: "500px",
-    margin: "10px auto 0"
+    margin: "10px auto 0",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem"
+    }
   },
   main: {
     background: "#FFFFFF",
