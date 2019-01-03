@@ -11,8 +11,8 @@ const landingPageStyle = {
     ...title,
     display: "inline-block",
     position: "relative",
-    [theme.breakpoints.down('sm')]: {
-      fontSize: "2rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem"
     },
     marginTop: "30px",
     minHeight: "32px",
@@ -23,8 +23,8 @@ const landingPageStyle = {
     fontSize: "1.313rem",
     maxWidth: "500px",
     margin: "10px auto 0",
-    [theme.breakpoints.down('sm')]: {
-      fontSize:"1.5rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem"
     }
   },
   main: {

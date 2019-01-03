@@ -27,7 +27,6 @@ import WorkSection from "./Sections/WorkSection";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import theme from "assets/jss/material-kit-react/views/componentsSections/theme";
 
-
 const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];
 
@@ -55,11 +54,11 @@ class LandingPage extends React.Component {
                 <GridItem xs={12} sm={12} md={12}>
                   <h1 className={classes.title}>
                     Asmuch, commitment through community.
-                </h1>
+                  </h1>
                   <h2 className={classes.subtitle}>
                     A rare place to find rare people, who are willing to do hard
                     thinking, to work together and to learn.
-                </h2>
+                  </h2>
                 </GridItem>
                 <GridItem
                   xs={8}
@@ -77,7 +76,7 @@ class LandingPage extends React.Component {
                     size="lg"
                   >
                     Direct connect to Slack Community
-                </Button>
+                  </Button>
                 </GridItem>
               </GridContainer>
             </div>
