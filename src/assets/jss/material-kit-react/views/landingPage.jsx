@@ -21,7 +21,6 @@ const landingPageStyle = {
   },
   subtitle: {
     fontSize: "1.313rem",
-    maxWidth: "500px",
     margin: "10px auto 0",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem"
