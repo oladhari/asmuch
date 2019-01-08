@@ -16,7 +16,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
-
+import Regis from './GhostRegis'
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
@@ -48,15 +48,14 @@ class TeamSection extends React.Component {
     );
     let user_keys = [];
     let konamiCode = '38,38,40,40,37,39,37,39,66,65'
-    // let message = ["%cHit the Konami's code \u2764 ...", "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"]
-    // window.console.log.apply(console, message)
+    let message = ["%cKonami initialised...", "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"]
+    window.console.log.apply(console, message)
 
     return (
       <div>
         {document.onkeydown = (e) => {
           user_keys.push(e.keyCode)
           if (user_keys.toString().indexOf(konamiCode) >= 0) {
-            console.log('KONAMI!');
             this.setState({
               open: true
             })
@@ -70,7 +69,7 @@ class TeamSection extends React.Component {
         >
           <AppBar className={classes.appBar}>
             <Toolbar>
-              <Typography variant="h6" color="inherit" className={classes.flex}>
+              <Typography variant="h4" color="inherit" className={classes.flex}>
                 Secret News
               </Typography>
               <Button color="inherit" onClick={this.handleClose}>
@@ -78,6 +77,7 @@ class TeamSection extends React.Component {
               </Button>
             </Toolbar>
           </AppBar>
+          <Regis />
         </Dialog>
 
         <div className={classes.section}>

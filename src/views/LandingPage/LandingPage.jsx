@@ -53,11 +53,11 @@ class LandingPage extends React.Component {
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={12}>
                   <h1 className={classes.title}>
-                    Asmuch, commitment through community.
+                    Asmuch, commitment through JavaScript community.
                   </h1>
                   <h2 className={classes.subtitle}>
                     A rare place to find rare people, who are willing to do hard
-                    thinking, to work together and to learn.
+                    thinking, to work and to learn together.
                   </h2>
                 </GridItem>
                 <GridItem
