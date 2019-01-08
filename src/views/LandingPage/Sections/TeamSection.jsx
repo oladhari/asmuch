@@ -69,10 +69,10 @@ class TeamSection extends React.Component {
         >
           <AppBar className={classes.appBar}>
             <Toolbar>
-              <Typography variant="h4" color="inherit" className={classes.flex}>
+              <Typography className={classes.flex}>
                 Secret News
               </Typography>
-              <Button color="inherit" onClick={this.handleClose}>
+              <Button onClick={this.handleClose}>
                 close
               </Button>
             </Toolbar>
