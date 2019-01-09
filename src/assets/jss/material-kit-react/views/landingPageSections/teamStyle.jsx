@@ -43,10 +43,10 @@ const teamStyle = {
     margin: "5px"
   },
   appBar: {
-    position: 'relative',
+    position: "relative"
   },
   flex: {
-    flex: 1,
+    flex: 1
   }
 };
 

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
 
-
 // core components
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
@@ -11,12 +10,12 @@ import Button from "components/CustomButtons/Button";
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
-import Dialog from '@material-ui/core/Dialog';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Slide from '@material-ui/core/Slide';
-import Regis from './GhostRegis'
+import Dialog from "@material-ui/core/Dialog";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Slide from "@material-ui/core/Slide";
+import Regis from "./GhostRegis";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
@@ -25,19 +24,19 @@ import team2 from "assets/img/faces/farid.jpg";
 import team3 from "assets/img/faces/dai.jpg";
 
 function Transition(props) {
-  return <Slide direction="up" {...props} />
+  return <Slide direction="up" {...props} />;
 }
 
 class TeamSection extends React.Component {
   state = {
-    open: false,
+    open: false
   };
 
   handleClose = () => {
     this.setState({
       open: false
-    })
-  }
+    });
+  };
 
   render() {
     const { classes } = this.props;
@@ -47,20 +46,25 @@ class TeamSection extends React.Component {
       classes.imgFluid
     );
     let user_keys = [];
-    let konamiCode = '38,38,40,40,37,39,37,39,66,65'
-    let message = ["%cKonami initialised...", "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"]
-    window.console.log.apply(console, message)
+    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
+    let message = [
+      "%cKonami initialised...",
+      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+    ];
+    window.console.log.apply(console, message);
 
     return (
       <div>
-        {document.onkeydown = (e) => {
-          user_keys.push(e.keyCode)
-          if (user_keys.toString().indexOf(konamiCode) >= 0) {
-            this.setState({
-              open: true
-            })
-          }
-        }}
+        {
+          (document.onkeydown = e => {
+            user_keys.push(e.keyCode);
+            if (user_keys.toString().indexOf(konamiCode) >= 0) {
+              this.setState({
+                open: true
+              });
+            }
+          })
+        }
         <Dialog
           fullScreen
           open={this.state.open}
@@ -69,10 +73,10 @@ class TeamSection extends React.Component {
         >
           <AppBar className={classes.appBar}>
             <Toolbar>
-              <Typography className={classes.flex}>
+              <Typography variant="h4" color="inherit" className={classes.flex}>
                 Secret News
               </Typography>
-              <Button onClick={this.handleClose}>
+              <Button color="inherit" onClick={this.handleClose}>
                 close
               </Button>
             </Toolbar>
@@ -91,15 +95,15 @@ class TeamSection extends React.Component {
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Jesse Katsumata
-                  <br />
+                    <br />
                     <small className={classes.smallTitle}>Admin</small>
                   </h4>
                   <CardBody>
                     <p className={classes.description}>
-                      Full Stack developer based in Tokyo. Strong believer in the
-                      power of javascript. Tech Stack: React, React-Native, Node,
-                      Electron, Mongo, Express
-                  </p>
+                      Full Stack developer based in Tokyo. Strong believer in
+                      the power of javascript. Tech Stack: React, React-Native,
+                      Node, Electron, Mongo, Express
+                    </p>
                   </CardBody>
                   <CardFooter className={classes.justifyCenter}>
                     <Button
@@ -130,15 +134,15 @@ class TeamSection extends React.Component {
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Farid Hammouten
-                  <br />
+                    <br />
                     <small className={classes.smallTitle}>Founder</small>
                   </h4>
                   <CardBody>
                     <p className={classes.description}>
-                      JavaScript Engineer based in Osaka. Big Dreamer and love to
-                      exchange knowledge. Tech Stack: JavaScript, Node, React,
-                      (start Express & Mongo november 2018)
-                  </p>
+                      JavaScript Engineer based in Osaka. Big Dreamer and love
+                      to exchange knowledge. Tech Stack: JavaScript, Node,
+                      React, (start Express & Mongo november 2018)
+                    </p>
                   </CardBody>
                   <CardFooter className={classes.justifyCenter}>
                     <Button
@@ -178,15 +182,15 @@ class TeamSection extends React.Component {
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Dai Phan Tran
-                  <br />
+                    <br />
                     <small className={classes.smallTitle}>Moderator</small>
                   </h4>
                   <CardBody>
                     <p className={classes.description}>
-                      Open mind Web Designer based in France, love challenges and
-                      meeting new people, believe that image is better than word
-                      to express things.
-                  </p>
+                      Open mind Web Designer based in France, love challenges
+                      and meeting new people, believe that image is better than
+                      word to express things.
+                    </p>
                   </CardBody>
                   <CardFooter className={classes.justifyCenter}>
                     <Button
