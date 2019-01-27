@@ -15,7 +15,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Slide from "@material-ui/core/Slide";
-import Booo from "./Ghost";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
@@ -81,7 +80,7 @@ class TeamSection extends React.Component {
               </Button>
             </Toolbar>
           </AppBar>
-          <Booo />
+          {/* must put the mailchimp mailserver */}
         </Dialog>
 
         <div className={classes.section}>
