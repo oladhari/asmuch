@@ -15,7 +15,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Slide from "@material-ui/core/Slide";
-import Regis from "./GhostRegis";
+import Booo from "./Ghost";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
@@ -74,14 +74,14 @@ class TeamSection extends React.Component {
           <AppBar className={classes.appBar}>
             <Toolbar>
               <Typography variant="h4" color="inherit" className={classes.flex}>
-                Secret News
+                Skillz Project
               </Typography>
               <Button color="inherit" onClick={this.handleClose}>
                 close
               </Button>
             </Toolbar>
           </AppBar>
-          <Regis />
+          <Booo />
         </Dialog>
 
         <div className={classes.section}>
