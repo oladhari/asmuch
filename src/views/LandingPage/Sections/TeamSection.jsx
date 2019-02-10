@@ -15,7 +15,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Slide from "@material-ui/core/Slide";
-import { Link } from "react-router-dom";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
@@ -91,9 +90,7 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <Link to={"/jesse"} className={classes.link}>
-                      <img src={team1} alt="Jesse" className={imageClasses} />
-                    </Link>
+                    <img src={team1} alt="Jesse" className={imageClasses} />
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Jesse Katsumata
@@ -132,9 +129,7 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <Link to={"/farid"} className={classes.link}>
-                      <img src={team2} alt="Farid" className={imageClasses} />
-                    </Link>
+                    <img src={team2} alt="Farid" className={imageClasses} />
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Farid Hammouten
@@ -182,9 +177,7 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <Link to={"/dai"} className={classes.link}>
-                      <img src={team3} alt="Dai" className={imageClasses} />
-                    </Link>
+                    <img src={team3} alt="Dai" className={imageClasses} />
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Dai Phan Tran
