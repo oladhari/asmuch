@@ -19,9 +19,10 @@ import Parallax from "components/Parallax/Parallax";
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection";
-import TeamSection from "./Sections/TeamSection";
-import WorkSection from "./Sections/WorkSection";
+import ProductSection from "./Sections/ProductSection.jsx";
+import TeamSection from "./Sections/TeamSection.jsx";
+import WorkSection from "./Sections/WorkSection.jsx";
+import HiddenSection from "./Sections/HiddenSection.jsx"
 
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -84,6 +85,7 @@ class LandingPage extends React.Component {
           <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.container}>
               <ProductSection />
+              <HiddenSection />
               <TeamSection />
               <WorkSection />
             </div>

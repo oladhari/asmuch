@@ -10,11 +10,6 @@ import Button from "components/CustomButtons/Button";
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
-import Dialog from "@material-ui/core/Dialog";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Slide from "@material-ui/core/Slide";
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
@@ -22,20 +17,9 @@ import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
 import team3 from "assets/img/faces/dai.jpg";
 
-function Transition(props) {
-  return <Slide direction="up" {...props} />;
-}
+
 
 class TeamSection extends React.Component {
-  state = {
-    open: false
-  };
-
-  handleClose = () => {
-    this.setState({
-      open: false
-    });
-  };
 
   render() {
     const { classes } = this.props;
@@ -44,45 +28,9 @@ class TeamSection extends React.Component {
       classes.imgRoundedCircle,
       classes.imgFluid
     );
-    let user_keys = [];
-    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
-    let message = [
-      "%cKonami initialised...",
-      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
-    ];
-    window.console.log.apply(console, message);
 
     return (
       <div>
-        {
-          (document.onkeydown = e => {
-            user_keys.push(e.keyCode);
-            if (user_keys.toString().indexOf(konamiCode) >= 0) {
-              this.setState({
-                open: true
-              });
-            }
-          })
-        }
-        <Dialog
-          fullScreen
-          open={this.state.open}
-          onClose={this.handleClose}
-          TransitionComponent={Transition}
-        >
-          <AppBar className={classes.appBar}>
-            <Toolbar>
-              <Typography variant="h4" color="inherit" className={classes.flex}>
-                Skillz Project
-              </Typography>
-              <Button color="inherit" onClick={this.handleClose}>
-                close
-              </Button>
-            </Toolbar>
-          </AppBar>
-          {/* must put the mailchimp mailserver */}
-        </Dialog>
-
         <div className={classes.section}>
           <h2 className={classes.title}>Here is our team</h2>
           <div>
