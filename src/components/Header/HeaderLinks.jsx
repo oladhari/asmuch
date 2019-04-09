@@ -73,6 +73,23 @@ function HeaderLinks({ ...props }) {
 
         </Tooltip>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <Tooltip
+          id="meetup-tooltip"
+          title="Join our meetup group"
+          placement={window.innerWidth  > 959 ? "top" : "left"}
+          classes={{tooltip: classes.tooltip }}
+        >
+          <Button
+            color="transparent"
+            href="https://www.meetup.com/As-much-%E4%BD%95%E3%81%A8%E3%81%8B/"
+            target="_blank"
+            className={classes.navLink}
+          >
+            <i className={classes.socials + "fa fa-meetup"} />
+          </Button>
+        </Tooltip>
+      </ListItem>
     </List>
   );
 }
