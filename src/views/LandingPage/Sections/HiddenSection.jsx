@@ -16,8 +16,8 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Exo from '../../../assets/js/hiddenExo.jsx';
-import 'typeface-roboto';
+import Exo from 'assets/js/hiddenExo.jsx';
+
 
 const styles = {
     appBar: {
@@ -57,13 +57,14 @@ class HiddenSection extends React.Component {
         let user_keys = [];
         let konamiCode = "38,38,40,40,37,39,37,39,66,65";
         const { classes } = this.props;
-        
+        var styleNice = ["%cNice", "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"]
             document.onkeydown = (event) => {
                 user_keys.push(event.keyCode);
                 if (user_keys.toString().indexOf(konamiCode) >= 0) {
-                    return this.setState({
-                        open: true
-                    });
+                  window.console.log.apply(console, styleNice);
+                  return this.setState({
+                      open: true
+                  });
                 }
             }
         
@@ -96,14 +97,13 @@ class HiddenSection extends React.Component {
                         <Grid item xs={12} className={classes.root}>
                             {
                                 Exo.map((el, key)=>{
-                                    console.log(el)
                                     return (
                                         <ExpansionPanel  key={key}>
                                             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                                                 <Typography className={classes.heading}>{el.title}</Typography>
                                             </ExpansionPanelSummary>
                                             <ExpansionPanelDetails>
-                                                <Typography variant="h5" component="h3">{el.subTitle}</Typography>
+                                                <Typography variant="display2" component="h3">{el.subTitle}</Typography>
                                                 <Typography >{el.descrip}</Typography>
                                             </ExpansionPanelDetails>                    
                                         </ExpansionPanel>
