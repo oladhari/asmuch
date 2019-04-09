@@ -55,57 +55,53 @@ function Register(props) {
   const { classes } = props;
   return (
     <main className={classes.main}>
-        <CssBaseline />
-        <Paper className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockIcon />
-          </Avatar>
-          <Typography variant="h5">Register</Typography>
-          <form className={classes.form}>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="firstName">First Name</InputLabel>
-              <Input
-                id="firstName"
-                name="firstName"
-                autoComplete="firstName"
-              />
-            </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="lastName">Last Name</InputLabel>
-              <Input id="lastName" name="lastName" autoComplete="lastName" />
-            </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="asMuchNickname">AsMuch Nickname</InputLabel>
-              <Input
-                id="asMuchNickname"
-                name="asMuchNickname"
-                autoComplete="asMuchNickname"
-              />
-            </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="email">Email Address</InputLabel>
-              <Input id="email" name="email" autoComplete="email" />
-            </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="password">Password</InputLabel>
-              <Input
-                name="password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-            </FormControl>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Register
-            </Button>
-          </form>
-        </Paper>
+      <CssBaseline />
+      <Paper className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <LockIcon />
+        </Avatar>
+        <Typography variant="h5">Register</Typography>
+        <form className={classes.form}>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="firstName">First Name</InputLabel>
+            <Input id="firstName" name="firstName" autoComplete="firstName" />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="lastName">Last Name</InputLabel>
+            <Input id="lastName" name="lastName" autoComplete="lastName" />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="asMuchNickname">AsMuch Nickname</InputLabel>
+            <Input
+              id="asMuchNickname"
+              name="asMuchNickname"
+              autoComplete="asMuchNickname"
+            />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="email">Email Address</InputLabel>
+            <Input id="email" name="email" autoComplete="email" />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="password">Password</InputLabel>
+            <Input
+              name="password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+          </FormControl>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+          >
+            Register
+          </Button>
+        </form>
+      </Paper>
     </main>
   );
 }

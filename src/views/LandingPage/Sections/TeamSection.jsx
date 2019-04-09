@@ -17,10 +17,7 @@ import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
 import team3 from "assets/img/faces/dai.jpg";
 
-
-
 class TeamSection extends React.Component {
-
   render() {
     const { classes } = this.props;
     const imageClasses = classNames(

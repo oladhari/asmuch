@@ -22,7 +22,7 @@ import landingPageStyle from "assets/jss/material-kit-react/views/landingPage";
 import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
-import HiddenSection from "./Sections/HiddenSection.jsx"
+import HiddenSection from "./Sections/HiddenSection.jsx";
 
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
