@@ -112,9 +112,10 @@ class HiddenSection extends React.Component {
                         {el.title}
                       </Typography>
                     </ExpansionPanelSummary>
+                    {el.import}
                     <ExpansionPanelDetails>
                       <Typography variant="display2" component="h3">
-                        {el.subTitle}
+                        {el.descrip}
                       </Typography>
                       <Typography>{el.descrip}</Typography>
                     </ExpansionPanelDetails>
