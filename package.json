@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "dependencies": {
     "@material-ui/core": "3.1.1",
-    "@material-ui/icons": "3.0.1",
+    "@material-ui/icons": "^3.0.1",
+    "@material-ui/styles": "^3.0.0-alpha.10",
     "classnames": "2.2.6",
     "express": "^4.16.4",
     "history": "4.7.2",
@@ -20,7 +21,8 @@
     "react-router-dom": "4.3.1",
     "react-scripts": "1.1.5",
     "react-slick": "0.23.1",
-    "react-swipeable-views": "0.13.0"
+    "react-swipeable-views": "0.13.0",
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
