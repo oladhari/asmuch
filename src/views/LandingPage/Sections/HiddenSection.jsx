@@ -57,7 +57,7 @@ class HiddenSection extends React.Component {
     let konamiCode = "38,38,40,40,37,39,37,39,66,65";
     const { classes } = this.props;
     var styleNice = [
-      "%cNice you find one of the secret of this website.",
+      "%cNice you find one of the secret of this website...",
       "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
     ];
     document.onkeydown = event => {
