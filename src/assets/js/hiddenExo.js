@@ -1,18 +1,13 @@
 const Exo = [
   {
     title: "Exo 1",
-    subTitle: "title1",
-    descrip: "description"
+    import: `import exo-01 from 'assets/markdown/01-exo.md'`,
+    descrip: "<exo-01 />"
   },
   {
     title: "Exo 2",
-    subTitle: "title2",
-    descrip: "description"
-  },
-  {
-    title: "EXO3",
-    subTitle: "mensetsu",
-    descrip: "test"
+    import: "import exo-02 from 'assets/markdown/02-exo.md'",
+    descrip: "<exo-02 />"
   }
 ];
 
