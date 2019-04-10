@@ -1,17 +1,17 @@
 # KEYBOARD
 
-### Exercices 1 
-- Crée (en HTML) une `DIV` avec l'id "character" 
-- Faire changer de couleur de fond a cette `DIV`à chaque fois qu'on appuie sur une numéro de 0 à 9 sur le clavier
+### Exercises 1
+- Create (in HTML) a `DIV` with the id" character "
+- Change background color to this `DIV` each time you press a number from 0 to 9 on the keyboard
 
-> Tip : utiliser le `switch`
+> Tip: use the `switch`
 
-### Exercices 2
-- Crée (en HTML) 4 `divs` avec les id suivantes : "up, down, left, right"
-- crée une class 'highlight' dans le CSS qui réduit l'opacité de l'élément
-- Pour chaque div ajouter la classe 'highlight' quand une des touches directionel est enfoncée
-- Pour chaque div retier la classe 'highlight' quand on relâche la touche
+### Exercises 2
+- Create (in HTML) 4 `divs` with the following ids:" up, down, left, right "
+- creates a class 'highlight' in the CSS that reduces the opacity of the element
+- For each div add the class 'highlight' when one of the directional keys is pressed
+- For each div retaining the class 'highlight' when you release the key
 
-> Tip : Faire la structure HTML sans JavaScript
+> Tip: Make HTML structure without JavaScript
  
 
