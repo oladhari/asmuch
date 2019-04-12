@@ -23,17 +23,50 @@ import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
 import HiddenSection from "./Sections/HiddenSection.jsx";
+// import HiddenConsole from "./Sections/HiddenConsole.jsx";
 
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import theme from "assets/jss/material-kit-react/views/componentsSections/theme";
 
+
 const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      open: flase
+    }
+  }
+
+  handleClose = () =>{
+    this.setState({
+      open: false
+    })
+  }
+
   render() {
     const { classes, ...rest } = this.props;
+    let user_keys = [];
+    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
+    let hiddencnsl = "67,79,78,83,79,76,69,13";
+    var styleNice = [
+      "%cSecret open",
+      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+    ];
+    document.onkeydown = event => {
+      user_keys.push(event.keyCode);
+      if (user_keys.toString().indexOf(konamiCode || hiddencnsl) >= 0 ) {
+        window.console.log.apply(console, styleNice);
+        return this.setState({
+          open: true
+        });
+      }
+    };
+
+
     return (
       <MuiThemeProvider theme={muiTheme}>
         <div>
@@ -86,6 +119,7 @@ class LandingPage extends React.Component {
             <div className={classes.container}>
               <ProductSection />
               <HiddenSection />
+              <HiddenConsole />
               <TeamSection />
               <WorkSection />
             </div>

@@ -19,6 +19,7 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Exo from "assets/js/hiddenExo";
 
+
 const styles = {
   appBar: {
     position: "relative"
@@ -42,34 +43,8 @@ function Transition(props) {
 }
 
 class HiddenSection extends React.Component {
-  state = {
-    open: false
-  };
-
-  handleClose = () => {
-    this.setState({
-      open: false
-    });
-  };
-
   render() {
-    let user_keys = [];
-    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
     const { classes } = this.props;
-    var styleNice = [
-      "%cNice you find one of the secret of this website...",
-      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
-    ];
-    document.onkeydown = event => {
-      user_keys.push(event.keyCode);
-      if (user_keys.toString().indexOf(konamiCode) >= 0) {
-        window.console.log.apply(console, styleNice);
-        return this.setState({
-          open: true
-        });
-      }
-    };
-
     return (
       <div>
         <Dialog
