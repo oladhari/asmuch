@@ -17,7 +17,7 @@ class HiddenConsole extends Component {
         return (
           <div>
             <Dialog
-              open={this.state.open}
+              open={this.props.open}
               TransitionComponent={Transition}
               keepMounted
               onClose={this.handleClose}

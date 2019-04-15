@@ -42,15 +42,19 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-class HiddenSection extends React.Component {
-  render() {
-    const { classes } = this.props;
+const handleClose = () =>{
+  return false
+}
+
+
+function HiddenSection (props) {
+  const { classes } = props
     return (
       <div>
         <Dialog
           fullScreen
-          open={this.state.open}
-          onClose={this.handleClose}
+          open={true}
+          onClose={handleClose}
           TransitionComponent={Transition}
         >
           <AppBar className={classes.appBar}>
@@ -102,7 +106,6 @@ class HiddenSection extends React.Component {
         </Dialog>
       </div>
     );
-  }
 }
 
 HiddenSection.propTypes = {

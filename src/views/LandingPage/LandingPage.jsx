@@ -23,7 +23,7 @@ import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
 import HiddenSection from "./Sections/HiddenSection.jsx";
-// import HiddenConsole from "./Sections/HiddenConsole.jsx";
+import HiddenConsole from "./Sections/HiddenConsole.jsx";
 
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -34,37 +34,41 @@ const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      open: flase
-    }
-  }
-
-  handleClose = () =>{
-    this.setState({
-      open: false
-    })
-  }
-
   render() {
     const { classes, ...rest } = this.props;
     let user_keys = [];
-    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
-    let hiddencnsl = "67,79,78,83,79,76,69,13";
-    var styleNice = [
-      "%cSecret open",
-      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
-    ];
-    document.onkeydown = event => {
+    let secret_1 = "38,38,40,40,37,39,37,39,66,65";
+    let secret_2 = "67,79,78,83,79,76,69,13";
+    let secret_3 = "72,69,76,80,13";
+
+    document.onkeydown = event =>{
       user_keys.push(event.keyCode);
-      if (user_keys.toString().indexOf(konamiCode || hiddencnsl) >= 0 ) {
-        window.console.log.apply(console, styleNice);
-        return this.setState({
-          open: true
-        });
+      if(user_keys.toString().indexOf(secret_1) >=0){
+        let secret1 = [
+          "%cSecret #1",
+          "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+        ];
+        window.console.log.apply(console, secret1);
+        user_keys = [];        
       }
-    };
+      else if (user_keys.toString().indexOf(secret_2) >=0){
+        let secret2 = [
+          "%cSecret #2",
+          "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+        ];
+        window.console.log.apply(console, secret2);
+        user_keys =[];
+        
+      }
+      else if (user_keys.toString().indexOf(secret_3) >=0 ){
+        let secret3 = [
+          "%cSecret #3",
+          "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+        ];
+        window.console.log.apply(console, secret3);
+        user_keys = [];
+      }
+    }
 
 
     return (
@@ -118,8 +122,8 @@ class LandingPage extends React.Component {
           <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.container}>
               <ProductSection />
-              <HiddenSection />
-              <HiddenConsole />
+              {/* <HiddenSection open={this.state.open} />
+              <HiddenConsole open={this.state.open} /> */}
               <TeamSection />
               <WorkSection />
             </div>
