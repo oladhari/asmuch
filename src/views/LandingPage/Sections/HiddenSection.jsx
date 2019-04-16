@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/styles";
+import { withStyles } from "@material-ui/core/styles";
 
 // core components
 import Dialog from "@material-ui/core/Dialog";
@@ -17,9 +17,13 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Exo from "assets/js/hiddenExo";
 
-const styles = {
+
+//exercice
+import TableExo from 'assets/js/table.jsx';
+
+
+const styles = theme => ({
   appBar: {
     position: "relative"
   },
@@ -27,15 +31,16 @@ const styles = {
     flex: 1
   },
   bazar: {
-    padddingTop: "10vh"
+    padddingTop: "13vh"
   },
   root: {
     width: "100%"
   },
   heading: {
-    fontSize: "1rem"
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
   }
-};
+});
 
 function Transition(props) {
   return <Slide direction="up" {...props} />;
@@ -101,26 +106,25 @@ class HiddenSection extends React.Component {
             direction="column"
             justify="center"
             alignItems="center"
-            className={classes.bazar}
+            
+            position="fixe"
           >
             <Grid item xs={12} className={classes.root}>
-              {Exo.map((el, key) => {
+              {TableExo.map((el, key) => {
                 return (
-                  <ExpansionPanel key={key}>
-                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                      <Typography className={classes.heading}>
-                        {el.title}
-                      </Typography>
-                    </ExpansionPanelSummary>
-                    {el.import}
-                    <ExpansionPanelDetails>
-                      <Typography variant="display2" component="h3">
-                        {el.descrip}
-                      </Typography>
-                      <Typography>{el.descrip}</Typography>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                );
+                <ExpansionPanel key={key}>
+                  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography className={classes.heading}>
+                      {el.title}
+                    </Typography>
+                  </ExpansionPanelSummary>
+                  <ExpansionPanelDetails>
+                    <Typography>
+                      {el.content}
+                    </Typography>
+                  </ExpansionPanelDetails>
+                </ExpansionPanel>
+                )
               })}
             </Grid>
           </Grid>
@@ -131,7 +135,7 @@ class HiddenSection extends React.Component {
 }
 
 HiddenSection.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.string)
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(HiddenSection);
