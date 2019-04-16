@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="google-site-verification" content="G4RBd1-ckK-zzp9Hon9UxuGBqz2Lq4z7jBUG_yhPXhg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content=" AsMuch何とか, community of developerswho want to share, teach and learn from each other, don't stay anymore alone come and join us">
-    <meta name="keywords" content="'farid212', 'as much', 'asmuch', 'AsMuch', 'As Much', 'asmuchnantoka', 'as much nan to ka', 'as much nani to ka', as much javascript community, AsMuch javascript community, AsMuch JS community, asmuch js community, asmuch community, JavaScript, JS, Node, Node.js, React, React.js, React-Native, Angular, Express, MangoDB, mentoring, help">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/apple-icon.png">
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
-    <title>AsMuch何とか</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!-- <script src="../src/assets/js/keepAlive.js"></script> -->
-    <script>
-      var style = ["%cGreat, you looks interested,\uD83D\uDC28%cType the Konami code \u2764 ...", "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;", "color: #fff; background: #b0976d; padding:10px ;font-size: 1.2em; line-height: 2.2em;"];
-      window.console.log.apply(console, style);
-    </script>
-    <script>
-      const table = [
+const table = [
   [
     {
       title: "Exercise: Fair price",
@@ -197,6 +165,4 @@
   ]
 ];
 
-    </script>
-  </body>
-</html>
+export default table;
