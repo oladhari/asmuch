@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 //data Exo
-import Exo from "../../assets/js/hiddenExo.jsx";
+import Exo from "../../assets/js/hiddenExo";
 
 const styles = {
   root: {
