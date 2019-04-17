@@ -19,7 +19,6 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Exo from "assets/js/hiddenExo";
 
-
 const styles = {
   appBar: {
     position: "relative"
@@ -42,70 +41,66 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-const handleClose = () =>{
-  return false
-}
-
-
-function HiddenSection (props) {
-  const { classes } = props
-    return (
-      <div>
-        <Dialog
-          fullScreen
-          open={true}
-          onClose={handleClose}
-          TransitionComponent={Transition}
+function HiddenSection(params) {
+  const { open, handleClose } = this.props;
+  const { classes } = params;
+  return (
+    <div>
+      <Dialog
+        fullScreen
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Transition}
+      >
+        <AppBar className={classes.appBar}>
+          <ToolBar>
+            <Typography
+              variant="title"
+              color="inherit"
+              className={classes.flex}
+            >
+              Skillz Project
+            </Typography>
+            <IconButton
+              color="inherit"
+              onClick={handleClose}
+              aria-label="close"
+            >
+              <CloseIcon />
+            </IconButton>
+          </ToolBar>
+        </AppBar>
+        <Grid
+          container
+          direction="column"
+          justify="center"
+          alignItems="center"
+          className={classes.bazar}
         >
-          <AppBar className={classes.appBar}>
-            <ToolBar>
-              <Typography
-                variant="title"
-                color="inherit"
-                className={classes.flex}
-              >
-                Skillz Project
-              </Typography>
-              <IconButton
-                color="inherit"
-                onClick={this.handleClose}
-                aria-label="close"
-              >
-                <CloseIcon />
-              </IconButton>
-            </ToolBar>
-          </AppBar>
-          <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
-            className={classes.bazar}
-          >
-            <Grid item xs={12} className={classes.root}>
-              {Exo.map((el, key) => {
-                return (
-                  <ExpansionPanel key={key}>
-                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                      <Typography className={classes.heading}>
-                        {el.title}
-                      </Typography>
-                    </ExpansionPanelSummary>
-                    {el.import}
-                    <ExpansionPanelDetails>
-                      <Typography variant="display2" component="h3">
-                        {el.descrip}
-                      </Typography>
-                      <Typography>{el.descrip}</Typography>
-                    </ExpansionPanelDetails>
-                  </ExpansionPanel>
-                );
-              })}
-            </Grid>
+          <Grid item xs={12} className={classes.root}>
+            {Exo.map((el, key) => {
+              return (
+                <ExpansionPanel key={key}>
+                  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography className={classes.heading}>
+                      {el.title}
+                    </Typography>
+                  </ExpansionPanelSummary>
+                  {el.import}
+                  <ExpansionPanelDetails>
+                    <Typography variant="display2" component="h3">
+                      {el.descrip}
+                    </Typography>
+                    <Typography>{el.descrip}</Typography>
+                  </ExpansionPanelDetails>
+                </ExpansionPanel>
+              );
+            })}
           </Grid>
-        </Dialog>
-      </div>
-    );
+        </Grid>
+      </Dialog>
+    </div>
+  );
 }
 
 HiddenSection.propTypes = {
