@@ -1,6 +1,7 @@
 const table = [
   [
     {
+      level: "I",
       title: "Exercise: Fair price",
       content: [
         {
@@ -31,6 +32,7 @@ const table = [
     },
 
     {
+      level: "II",
       title: "Exercise: Minimum and Maximum",
       content: [
         {
@@ -67,6 +69,7 @@ const table = [
       ]
     },
     {
+      level: "III",
       title: "Exercise: JS Cookie Clicker",
       content: [
         {
@@ -159,6 +162,45 @@ const table = [
         {
           subTitle: "Step 15: the CSS",
           descript: ["How beautiful! No pictures!"]
+        }
+      ]
+    },
+    {
+      level: "I",
+      title: "Exercise: Hangman game",
+      content: [
+        {
+          subTitle: "Info: the number of tests is unlimited",
+          descript: [
+            "Create an array to contain the letters of the word: 'G', 'O', 'O', 'D', 'M', 'O', 'R', 'N', 'I', 'N', 'G'",
+            "Create another table to put the guessed letters: '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'"
+          ]
+        },
+        {
+          subTitle: 'Write a function called "guessLetter" this function goes:',
+          descript: [
+            "Iterate through the letters",
+            "See if the letter guessed is in the word",
+            "If yes change the diverted letters table to add the new letter",
+            "Display in the console the guessed letters",
+            "The game must know when the game is over and congratulate the player"
+          ]
+        },
+        {
+          subTitle: "Bonus: Getting closer to the real hanged man:",
+          descript: [
+            "Keep in mind all guessed letters (good and bad) and only let the user guess a letter once.",
+            "If a letter is entered twice, do nothing.",
+            "Count the number of failed attempts"
+          ]
+        },
+        {
+          subTitle: "Tip: Use the ** or ** native features console:",
+          descript: [
+            "window.propmt();",
+            "window.alaert();",
+            "window.confirm();"
+          ]
         }
       ]
     }
