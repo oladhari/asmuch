@@ -10,13 +10,25 @@ function Transition(props) {
 }
 
 class HiddenConsole extends Component {
+  // constructor(props){
+  //   super(props);
+  //   this.state = {
+  //     open: false
+  //   };
+  // };
+
+  // handleClose = () =>{
+  //   this.setState({
+  //     open: false
+  //   });
+  // };
+
   render() {
-    // eslint-disable-next-line react/prop-types
-    const { open, handleClose } = this.props;
+    const { handleOpen, handleClose } = this.props;
     return (
       <div>
         <Dialog
-          open={open}
+          open={handleOpen}
           TransitionComponent={Transition}
           keepMounted
           onClose={handleClose}
