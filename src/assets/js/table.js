@@ -161,6 +161,263 @@ const table = [
           descript: ["How beautiful! No pictures!"]
         }
       ]
+    },
+    {
+      title: "Exercise: Hangman game",
+      content: [
+        {
+          subTitle: "Info: the number of tests is unlimited",
+          descript: [
+            "Create an array to contain the letters of the word: 'G', 'O', 'O', 'D', 'M', 'O', 'R', 'N', 'I', 'N', 'G'",
+            "Create another table to put the guessed letters: '_', '_', '_', '_', '_', '_', '_', '_', '_', '_', '_'"
+          ]
+        },
+        {
+          subTitle: 'Write a function called "guessLetter" this function goes:',
+          descript: [
+            "Iterate through the letters",
+            "See if the letter guessed is in the word",
+            "If yes change the diverted letters table to add the new letter",
+            "Display in the console the guessed letters",
+            "The game must know when the game is over and congratulate the player"
+          ]
+        },
+        {
+          subTitle: "Bonus: Getting closer to the real hanged man:",
+          descript: [
+            "Keep in mind all guessed letters (good and bad) and only let the user guess a letter once.",
+            "If a letter is entered twice, do nothing.",
+            "Count the number of failed attempts"
+          ]
+        },
+        {
+          subTitle: "Tip: Use the ** or ** native features console:",
+          descript: [
+            "window.propmt();",
+            "window.alaert();",
+            "window.confirm();"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercise: MasterMind",
+      content: [
+        {
+          subTitle: "Goal",
+          descript: ["develop a mastermind in HTML - CSS - JS"]
+        },
+        {
+          subTitle: "Create a MasterMind",
+          descript: [
+            "<a href='https://en.wikipedia.org/wiki/Mastermind' target='_blank'>Rules of game</a>",
+            "Precision: for the normal mode, the solution = 4 different colors"
+          ]
+        },
+        {
+          subTitle: "Create in HTML 3 div (minimum - you can do as you want)",
+          descript: [
+            "one for the response history",
+            "one for the current answers",
+            "one for the choice of colors (place 6 circles of different colors)"
+          ]
+        },
+        {
+          subTitle: "In JS:",
+          descript: [
+            "make sure that when you click on a color, it is placed in the div of answers.",
+            "Make sure that when the 4 colors are placed in the div answer, they move in the historical div.",
+            "When the colors arrive in the history, on the right, there are black or white balls that indicate if:",
+            "- they are well placed",
+            "- they are right but not in the right place"
+          ]
+        },
+        {
+          subTitle:
+            "PS: it is not necessary that the black and white balls are in the same order as the balls of color (otherwise it is too easy)",
+          descript: []
+        },
+        {
+          subTitle: "Tip: first show the black balls and then the white balls.",
+          descript: [
+            "Make a function that creates an automatic solution at the beginning of each game. (use the random)"
+          ]
+        },
+        {
+          subTitle: "Extra Tip:",
+          descript: [
+            "Use innerHTML and others",
+            "Use a class 'round' and just change the background-color (for displacements in different div)"
+          ]
+        },
+        {
+          subTitle: "Bonus",
+          descript: [
+            "Make sure that when we are wrong we can remove colors from the current answers."
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercise: Mouse Events",
+      content: [
+        {
+          subTitle: "Mouse Events",
+          descript: [
+            "click, ctextmenu, dblclick, mousedown, mouseenter, mouseleave, mousemove, mouseover, mouseout, mouseup"
+          ]
+        },
+        {
+          subTitle: "Part 1",
+          descript: [
+            "Creates (in HTML) 3 `DIV` with the same class 'hoverMe'",
+            "Make disappear the divs when one passes the mouse over",
+            "Tip: use the `mouseenter` or `mouseover`"
+          ]
+        },
+        {
+          subTitle: "Part 2",
+          descript: [
+            "Create (in HTML) a `DIV` with a reset id",
+            "To make that when we click on it makes reappear the 3 divs first created",
+            "Tip: with an animation it would be super cool"
+          ]
+        },
+        {
+          subTitle: "Part 3",
+          descript: [
+            "Create (in HTML) 2 `DIV` with one id each 'x-axis' and 'y-axis'",
+            "So that when you move the mouse in the * window *, the position is displayed in the associated divs",
+            "Tip: Use the received event as an argument",
+            "Tip: Use `innerHTML` or` innerText`"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercise: Keyboard",
+      content: [
+        {
+          subTitle: "Excercise 1",
+          descript: [
+            "Create (in HTML) a `DIV` with the id 'character'",
+            "Change background color to this `DIV` each time you press a number from 0 to 9 on the keyboard",
+            "Tip: use the `switch`"
+          ]
+        },
+        {
+          subTitle: "Excercise 2",
+          descript: [
+            "Create (in HTML) 4 `divs` with the following ids: 'up, down, left, right'",
+            "creates a class 'highlight' in CSS that reduces the opacity of the element",
+            "For each div add the class 'highlight' when one of the directional keys is pressed",
+            "For each div retaining the class 'highlight' when you release the key",
+            "Tip: Make HTML structure without JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercis: Object",
+      content: [
+        {
+          subTitle: "The NPC (Non-Player-Character)",
+          descript: [
+            "Creates a 'Character' object that contains the following information:"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: ["name (string)", "age (number)", "items_to_give (table)"]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "display each information on a separate line in the __ (for in) console __",
+            "do a 'giveItem' function that allows the NPC to randomly give an object"
+          ]
+        },
+        {
+          subTitle: "The Shop",
+          descript: [
+            "Create a table with * items * for sale (sword, ax, scepter, etc.)",
+            "Characteristic of each object:",
+            "  - title (string)",
+            "  - physic (int)",
+            "  - magic (int)",
+            "  - minLevel (int)",
+            "  - available (boolean)",
+            "do a function to display all the objects",
+            "do a function to display the available objects",
+            "do a function to display objects whose minimum level is 10"
+          ]
+        },
+        {
+          subTitle: "The Character",
+          descript: [
+            "Creates a 'mainCharacter' object that has the following properties:",
+            "  - name (string)",
+            "  - level (int)",
+            "  - life (int)",
+            "  - weapon (object)",
+            "  - attack (function)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "the 'weapon' object has the following properties:",
+            "  - name (string)",
+            "  - damage (int)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "Call the 'attack' function of the character",
+            "  - the function must return:",
+            "       (the name of the character) attack with the weapon (name of the weapon) the damage is (level of the character multiplied by the damage of the weapon)"
+          ]
+        },
+        {
+          subTitle: "BONUS: The Opponent",
+          descript: [
+            "Creates a 'character' object that has the following properties:",
+            "  - name (string)",
+            "  - level (int)",
+            "  - life (int)",
+            "  - weapon (object)",
+            "  - attack (function)",
+            "  -receiveDamage (function)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "the 'weapon' object has the following properties:",
+            "  - name (string)",
+            "  - damage (int)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "Creates an 'opponentCharacter' object from character",
+            "Create a 'mainCharacter' object from character"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            'Call the "attack" function of "mainCharacter" so that it attacks "opponentCharacter"',
+            "  - the function must display in the console (line by lige)",
+            "(the name of the character) attack (name of the opponent)",
+            "with the weapon (name of the weapon)",
+            "and inflicts damage (character level multiplied by weapon damage)",
+            "(name of the opponent) now has (life of the opponent) of life"
+          ]
+        }
+      ]
     }
   ]
 ];
