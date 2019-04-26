@@ -45,7 +45,8 @@ const styles = theme => ({
   },
   explication: {
     marginLeft: "30px",
-    fontWeight: 300
+    fontWeight: 300,
+    marginBottom: "10px"
   }
 });
 
@@ -54,9 +55,12 @@ function Transition(props) {
 }
 
 class HiddenSection extends React.Component {
-  state = {
-    open: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
 
   handleClose = () => {
     this.setState({

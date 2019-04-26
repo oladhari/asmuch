@@ -234,7 +234,8 @@ const table = [
         },
         {
           subTitle:
-            "PS: it is not necessary that the black and white balls are in the same order as the balls of color (otherwise it is too easy)"
+            "PS: it is not necessary that the black and white balls are in the same order as the balls of color (otherwise it is too easy)",
+          descript: []
         },
         {
           subTitle: "Tip: first show the black balls and then the white balls.",
@@ -253,6 +254,167 @@ const table = [
           subTitle: "Bonus",
           descript: [
             "Make sure that when we are wrong we can remove colors from the current answers."
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercise: Mouse Events",
+      content: [
+        {
+          subTitle: "Mouse Events",
+          descript: [
+            "click, ctextmenu, dblclick, mousedown, mouseenter, mouseleave, mousemove, mouseover, mouseout, mouseup"
+          ]
+        },
+        {
+          subTitle: "Part 1",
+          descript: [
+            "Creates (in HTML) 3 `DIV` with the same class 'hoverMe'",
+            "Make disappear the divs when one passes the mouse over",
+            "Tip: use the `mouseenter` or `mouseover`"
+          ]
+        },
+        {
+          subTitle: "Part 2",
+          descript: [
+            "Create (in HTML) a `DIV` with a reset id",
+            "To make that when we click on it makes reappear the 3 divs first created",
+            "Tip: with an animation it would be super cool"
+          ]
+        },
+        {
+          subTitle: "Part 3",
+          descript: [
+            "Create (in HTML) 2 `DIV` with one id each 'x-axis' and 'y-axis'",
+            "So that when you move the mouse in the * window *, the position is displayed in the associated divs",
+            "Tip: Use the received event as an argument",
+            "Tip: Use `innerHTML` or` innerText`"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercise: Keyboard",
+      content: [
+        {
+          subTitle: "Excercise 1",
+          descript: [
+            "Create (in HTML) a `DIV` with the id 'character'",
+            "Change background color to this `DIV` each time you press a number from 0 to 9 on the keyboard",
+            "Tip: use the `switch`"
+          ]
+        },
+        {
+          subTitle: "Excercise 2",
+          descript: [
+            "Create (in HTML) 4 `divs` with the following ids: 'up, down, left, right'",
+            "creates a class 'highlight' in CSS that reduces the opacity of the element",
+            "For each div add the class 'highlight' when one of the directional keys is pressed",
+            "For each div retaining the class 'highlight' when you release the key",
+            "Tip: Make HTML structure without JavaScript"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercis: Object",
+      content: [
+        {
+          subTitle: "The NPC (Non-Player-Character)",
+          descript: [
+            "Creates a 'Character' object that contains the following information:"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: ["name (string)", "age (number)", "items_to_give (table)"]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "display each information on a separate line in the __ (for in) console __",
+            "do a 'giveItem' function that allows the NPC to randomly give an object"
+          ]
+        },
+        {
+          subTitle: "The Shop",
+          descript: [
+            "Create a table with * items * for sale (sword, ax, scepter, etc.)",
+            "Characteristic of each object:",
+            "  - title (string)",
+            "  - physic (int)",
+            "  - magic (int)",
+            "  - minLevel (int)",
+            "  - available (boolean)",
+            "do a function to display all the objects",
+            "do a function to display the available objects",
+            "do a function to display objects whose minimum level is 10"
+          ]
+        },
+        {
+          subTitle: "The Character",
+          descript: [
+            "Creates a 'mainCharacter' object that has the following properties:",
+            "  - name (string)",
+            "  - level (int)",
+            "  - life (int)",
+            "  - weapon (object)",
+            "  - attack (function)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "the 'weapon' object has the following properties:",
+            "  - name (string)",
+            "  - damage (int)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "Call the 'attack' function of the character",
+            "  - the function must return:",
+            "       (the name of the character) attack with the weapon (name of the weapon) the damage is (level of the character multiplied by the damage of the weapon)"
+          ]
+        },
+        {
+          subTitle: "BONUS: The Opponent",
+          descript: [
+            "Creates a 'character' object that has the following properties:",
+            "  - name (string)",
+            "  - level (int)",
+            "  - life (int)",
+            "  - weapon (object)",
+            "  - attack (function)",
+            "  -receiveDamage (function)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "the 'weapon' object has the following properties:",
+            "  - name (string)",
+            "  - damage (int)"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            "Creates an 'opponentCharacter' object from character",
+            "Create a 'mainCharacter' object from character"
+          ]
+        },
+        {
+          subTitle: "",
+          descript: [
+            'Call the "attack" function of "mainCharacter" so that it attacks "opponentCharacter"',
+            "  - the function must display in the console (line by lige)",
+            "(the name of the character) attack (name of the opponent)",
+            "with the weapon (name of the weapon)",
+            "and inflicts damage (character level multiplied by weapon damage)",
+            "(name of the opponent) now has (life of the opponent) of life"
           ]
         }
       ]
