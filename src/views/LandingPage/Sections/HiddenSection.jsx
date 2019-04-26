@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/styles";
 
@@ -15,7 +15,6 @@ import Grid from "@material-ui/core/Grid";
 //expansion component
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Exo from "assets/js/hiddenExo";
 
@@ -41,66 +40,114 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-function HiddenSection(params) {
-  const { open, handleClose } = this.props;
-  const { classes } = params;
-  return (
-    <div>
-      <Dialog
-        fullScreen
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Transition}
-      >
-        <AppBar className={classes.appBar}>
-          <ToolBar>
-            <Typography
-              variant="title"
-              color="inherit"
-              className={classes.flex}
-            >
-              Skillz Project
-            </Typography>
-            <IconButton
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-          </ToolBar>
-        </AppBar>
-        <Grid
-          container
-          direction="column"
-          justify="center"
-          alignItems="center"
-          className={classes.bazar}
+class HiddenSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
+
+  handleClose = () => {
+    this.setState({
+      open: false
+    });
+  };
+
+  render() {
+    const { classes } = this.props;
+    let user_keys = [];
+    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
+    let SS1 = [
+      "%cSecret #1",
+      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+    ];
+    document.onkeydown = event => {
+      user_keys.push(event.keyCode);
+      if (user_keys.toString().indexOf(konamiCode) >= 0) {
+        window.console.log.apply(console, SS1);
+        return this.setState({
+          open: true
+        });
+      }
+    };
+
+    return (
+      <div>
+        <Dialog
+          fullScreen
+          open={this.state.open}
+          onClose={this.handleClose}
+          TransitionComponent={Transition}
         >
-          <Grid item xs={12} className={classes.root}>
-            {Exo.map((el, key) => {
-              return (
-                <ExpansionPanel key={key}>
-                  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography className={classes.heading}>
-                      {el.title}
-                    </Typography>
-                  </ExpansionPanelSummary>
-                  {el.import}
-                  <ExpansionPanelDetails>
-                    <Typography variant="display2" component="h3">
-                      {el.descrip}
-                    </Typography>
-                    <Typography>{el.descrip}</Typography>
-                  </ExpansionPanelDetails>
-                </ExpansionPanel>
-              );
-            })}
+          <AppBar className={classes.appBar}>
+            <ToolBar>
+              <Typography
+                variant="title"
+                color="inherit"
+                className={classes.flex}
+              >
+                Skillz Project
+              </Typography>
+              <IconButton
+                color="inherit"
+                onClick={this.handleClose}
+                aria-label="close"
+              >
+                <CloseIcon />
+              </IconButton>
+            </ToolBar>
+          </AppBar>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+            className={classes.bazar}
+          >
+            <Grid item xs={12} className={classes.root}>
+              {Exo[0].map((exercice, keyLvl1) => {
+                return (
+                  <ExpansionPanel key={keyLvl1}>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                      <Typography variant="title" gutterBottom>
+                        {exercice.title}
+                      </Typography>
+                    </ExpansionPanelSummary>
+                    {exercice.content.map((partExo, keyLvl2) => {
+                      return (
+                        <div key={keyLvl2}>
+                          <Typography
+                            variant="subheading"
+                            gutterBottom
+                            className={classes.subTitle}
+                          >
+                            {partExo.subTitle}
+                          </Typography>
+                          {partExo.descript.map((explication, keyLvl3) => {
+                            return (
+                              <Grid item key={keyLvl3}>
+                                <Typography
+                                  component="p"
+                                  className={classes.explication}
+                                >
+                                  {explication}
+                                </Typography>
+                              </Grid>
+                            );
+                          })}
+                        </div>
+                      );
+                    })}
+                  </ExpansionPanel>
+                );
+              })}
+            </Grid>
           </Grid>
-        </Grid>
-      </Dialog>
-    </div>
-  );
+        </Dialog>
+      </div>
+    );
+  }
 }
 
 HiddenSection.propTypes = {

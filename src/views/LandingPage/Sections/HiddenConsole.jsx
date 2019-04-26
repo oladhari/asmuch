@@ -10,28 +10,42 @@ function Transition(props) {
 }
 
 class HiddenConsole extends Component {
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     open: false
-  //   };
-  // };
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
 
-  // handleClose = () =>{
-  //   this.setState({
-  //     open: false
-  //   });
-  // };
+  handleClose = () => {
+    this.setState({
+      open: false
+    });
+  };
 
   render() {
-    const { handleOpen, handleClose } = this.props;
+    let user_keys = [];
+    let cnslCode = "67,79,78,83,79,76,69,13";
+    let SS2 = [
+      "%cSecret #2",
+      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+    ];
+    document.onkeydown = event => {
+      user_keys.push(event.keyCode);
+      if (user_keys.toString().indexOf(cnslCode) >= 0) {
+        window.console.log.apply(console, SS2);
+        return this.setState({
+          open: true
+        });
+      }
+    };
     return (
       <div>
         <Dialog
-          open={handleOpen}
+          open={this.state.open}
           TransitionComponent={Transition}
           keepMounted
-          onClose={handleClose}
+          onClose={this.handleClose}
           aria-labelledby="alert-dialog-slide-title"
           aria-describedby="alert-dialog-slide-description"
         >
