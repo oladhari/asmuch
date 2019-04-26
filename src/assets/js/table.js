@@ -1,7 +1,6 @@
 const table = [
   [
     {
-      level: "I",
       title: "Exercise: Fair price",
       content: [
         {
@@ -32,7 +31,6 @@ const table = [
     },
 
     {
-      level: "II",
       title: "Exercise: Minimum and Maximum",
       content: [
         {
@@ -69,7 +67,6 @@ const table = [
       ]
     },
     {
-      level: "III",
       title: "Exercise: JS Cookie Clicker",
       content: [
         {
@@ -166,7 +163,6 @@ const table = [
       ]
     },
     {
-      level: "I",
       title: "Exercise: Hangman game",
       content: [
         {
@@ -200,6 +196,63 @@ const table = [
             "window.propmt();",
             "window.alaert();",
             "window.confirm();"
+          ]
+        }
+      ]
+    },
+    {
+      title: "Excercise: MasterMind",
+      content: [
+        {
+          subTitle: "Goal",
+          descript: ["develop a mastermind in HTML - CSS - JS"]
+        },
+        {
+          subTitle: "Create a MasterMind",
+          descript: [
+            "<a href='https://en.wikipedia.org/wiki/Mastermind' target='_blank'>Rules of game</a>",
+            "Precision: for the normal mode, the solution = 4 different colors"
+          ]
+        },
+        {
+          subTitle: "Create in HTML 3 div (minimum - you can do as you want)",
+          descript: [
+            "one for the response history",
+            "one for the current answers",
+            "one for the choice of colors (place 6 circles of different colors)"
+          ]
+        },
+        {
+          subTitle: "In JS:",
+          descript: [
+            "make sure that when you click on a color, it is placed in the div of answers.",
+            "Make sure that when the 4 colors are placed in the div answer, they move in the historical div.",
+            "When the colors arrive in the history, on the right, there are black or white balls that indicate if:",
+            "- they are well placed",
+            "- they are right but not in the right place"
+          ]
+        },
+        {
+          subTitle:
+            "PS: it is not necessary that the black and white balls are in the same order as the balls of color (otherwise it is too easy)"
+        },
+        {
+          subTitle: "Tip: first show the black balls and then the white balls.",
+          descript: [
+            "Make a function that creates an automatic solution at the beginning of each game. (use the random)"
+          ]
+        },
+        {
+          subTitle: "Extra Tip:",
+          descript: [
+            "Use innerHTML and others",
+            "Use a class 'round' and just change the background-color (for displacements in different div)"
+          ]
+        },
+        {
+          subTitle: "Bonus",
+          descript: [
+            "Make sure that when we are wrong we can remove colors from the current answers."
           ]
         }
       ]
