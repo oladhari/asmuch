@@ -23,6 +23,7 @@ import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
 import HiddenSection from "./Sections/HiddenSection.jsx";
+import HiddenConsole from "./Sections/HiddenConsole.jsx";
 
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -32,6 +33,25 @@ const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
+
+  handleClose = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  };
+
+  handleOpen = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  };
+
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -84,8 +104,9 @@ class LandingPage extends React.Component {
           </Parallax>
           <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.container}>
-              <ProductSection />
+              <HiddenConsole />
               <HiddenSection />
+              <ProductSection />
               <TeamSection />
               <WorkSection />
             </div>

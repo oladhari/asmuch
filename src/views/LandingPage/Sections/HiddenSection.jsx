@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
@@ -54,7 +54,8 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-class HiddenSection extends React.Component {
+
+class HiddenSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -69,17 +70,17 @@ class HiddenSection extends React.Component {
   };
 
   render() {
+    const { classes } = this.props;
     let user_keys = [];
     let konamiCode = "38,38,40,40,37,39,37,39,66,65";
-    const { classes } = this.props;
-    var styleNice = [
-      "%cNice",
+    let SS1 = [
+      "%cSecret #1",
       "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
     ];
     document.onkeydown = event => {
       user_keys.push(event.keyCode);
       if (user_keys.toString().indexOf(konamiCode) >= 0) {
-        window.console.log.apply(console, styleNice);
+        window.console.log.apply(console, SS1);
         return this.setState({
           open: true
         });
