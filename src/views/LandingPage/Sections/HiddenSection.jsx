@@ -54,7 +54,6 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-
 class HiddenSection extends Component {
   constructor(props) {
     super(props);
