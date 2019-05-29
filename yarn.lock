@@ -7971,6 +7971,11 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-bash@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/react-bash/-/react-bash-1.6.0.tgz#0b6d2d616c04343afe122c4ec56a424b16dd85b6"
+  integrity sha1-C20tYWwENDr+EixOxWpCSxbdhbY=
+
 react-datetime@2.15.0:
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.15.0.tgz#a8f7da6c58b6b45dbeea32d4e8485db17614e12c"

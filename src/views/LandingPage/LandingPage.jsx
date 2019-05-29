@@ -5,7 +5,8 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 
-// @material-ui/icons
+// links
+import { Link } from "react-router-dom";
 
 // core components
 import Header from "components/Header/Header";
@@ -32,6 +33,25 @@ const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
+
+  handleClose = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  };
+
+  handleOpen = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  };
+
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -54,7 +74,7 @@ class LandingPage extends React.Component {
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={12}>
                   <h1 className={classes.title}>
-                    Asmuch, commitment through JavaScript community.
+                    Asmuch, commitment through Developer community.
                   </h1>
                   <h2 className={classes.subtitle}>
                     A rare place to find rare people, who are willing to do hard
@@ -79,13 +99,26 @@ class LandingPage extends React.Component {
                     Direct connect to Slack Community
                   </Button>
                 </GridItem>
+                <GridItem
+                  id="termGame"
+                  xs={8}
+                  sm={8}
+                  container
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                >
+                  <Link to="/terminal" className={classes.link}>
+                    <Button color="info">play with the terminal</Button>
+                  </Link>
+                </GridItem>
               </GridContainer>
             </div>
           </Parallax>
           <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.container}>
-              <ProductSection />
               <HiddenSection />
+              <ProductSection />
               <TeamSection />
               <WorkSection />
             </div>

@@ -201,7 +201,7 @@ const table = [
       ]
     },
     {
-      title: "Excercise: MasterMind",
+      title: "Exercise: MasterMind",
       content: [
         {
           subTitle: "Goal",
@@ -259,7 +259,7 @@ const table = [
       ]
     },
     {
-      title: "Excercise: Mouse Events",
+      title: "Exercise: Mouse Events",
       content: [
         {
           subTitle: "Mouse Events",
@@ -295,7 +295,7 @@ const table = [
       ]
     },
     {
-      title: "Excercise: Keyboard",
+      title: "Exercise: Keyboard",
       content: [
         {
           subTitle: "Excercise 1",
@@ -318,7 +318,7 @@ const table = [
       ]
     },
     {
-      title: "Excercis: Object",
+      title: "Exercise: Object",
       content: [
         {
           subTitle: "The NPC (Non-Player-Character)",

@@ -82,7 +82,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.meetup.com/As-much-%E4%BD%95%E3%81%A8%E3%81%8B/"
+            href="https://www.meetup.com/As-much/"
             target="_blank"
             className={classes.navLink}
           >
