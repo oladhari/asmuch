@@ -4,18 +4,6 @@ import { hist } from "../../index";
 import propTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
-// // {
-//   borderadius: "0px",
-//   display: "flex",
-//   flexDirection: "column",
-//   fontFamily: "Inconsolata, monospace;",
-//   fontSize: "13px;",
-//   fontWeight: "400;",
-//   height: "100vh;",
-//   overflowY: "hidden;",
-//   textAlign: "left;"
-// }
-
 const history = [
   { value: "Hackers will be high-fived. ( ‘-’)人(ﾟ_ﾟ )" },
   { value: "Type `help` to begin" }
