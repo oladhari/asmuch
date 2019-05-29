@@ -74,7 +74,7 @@ class HiddenSection extends Component {
     let konamiCode = "38,38,40,40,37,39,37,39,66,65";
     let SS1 = [
       "%cSecret #1",
-      "color: #fff; background: #245060; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
+      "color: #fff; background: #f7d602; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
     ];
     document.onkeydown = event => {
       user_keys.push(event.keyCode);

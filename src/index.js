@@ -7,7 +7,7 @@ import indexRoutes from "routes/index";
 
 import "assets/scss/material-kit-react.css";
 
-var hist = createBrowserHistory();
+export var hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
