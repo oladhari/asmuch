@@ -11,6 +11,7 @@ import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
 
+//JSS
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 
 import team1 from "assets/img/faces/jesse.jpg";
@@ -81,7 +82,9 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <img src={team2} alt="Farid" className="img-thumbnail" />
+                    <Link to="/farid">
+                      <img src={team2} alt="Farid" className="img-thumbnail" />
+                    </Link>
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Farid Hammouten

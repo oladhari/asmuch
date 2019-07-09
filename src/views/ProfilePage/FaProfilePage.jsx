@@ -1,5 +1,4 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -16,6 +15,8 @@ import GridItem from "../../components/Grid/GridItem.jsx";
 import HeaderLinks from "../../components/Header/HeaderLinks.jsx";
 import NavPills from "../../components/NavPills/NavPills.jsx";
 import Parallax from "../../components/Parallax/Parallax.jsx";
+
+import { Link } from "react-router-dom";
 
 import profile from "assets/img/faces/farid.jpg";
 
@@ -43,17 +44,19 @@ class ProfilePage extends React.Component {
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
       <div>
-        <Header
-          color="transparent"
-          brand="As much 何とか"
-          rightLinks={<HeaderLinks />}
-          fixed
-          changeColorOnScroll={{
-            height: 200,
-            color: "white"
-          }}
-          {...rest}
-        />
+        <Link to="/">
+          <Header
+            color="transparent"
+            brand="As much 何とか"
+            rightLinks={<HeaderLinks />}
+            fixed
+            changeColorOnScroll={{
+              height: 200,
+              color: "white"
+            }}
+            {...rest}
+          />
+        </Link>
         <Parallax small filter image={require("assets/img/farid-bg.jpg")} />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
@@ -67,7 +70,7 @@ class ProfilePage extends React.Component {
                     <div className={classes.name}>
                       <h3 className={classes.title}>Farid Hammouten</h3>
                       <h6>Owner & Founder</h6>
-                      <h5>Mobile Application Developer</h5>
+                      <h5>Web Developer</h5>
                       <Button
                         justIcon
                         color="transparent"
@@ -75,7 +78,13 @@ class ProfilePage extends React.Component {
                         href="https://twitter.com/Faridh212"
                         target="_blank"
                       >
-                        <i className={classes.socials + " fab fa-twitter"} />
+                        <i
+                          className={
+                            classes.socials +
+                            " fab fa-twitter " +
+                            classes.btnTwitter
+                          }
+                        />
                       </Button>
                       <Button
                         justIcon
@@ -84,7 +93,13 @@ class ProfilePage extends React.Component {
                         href="https://github.com/farid212"
                         target="_blank"
                       >
-                        <i className={classes.socials + " fab fa-github"} />
+                        <i
+                          className={
+                            classes.socials +
+                            " fab fa-github " +
+                            classes.btnGithub
+                          }
+                        />
                       </Button>
                       <Button
                         justIcon
@@ -93,7 +108,28 @@ class ProfilePage extends React.Component {
                         href="https://medium.com/@farid212"
                         target="_blank"
                       >
-                        <i className={classes.socials + " fab fa-medium"} />
+                        <i
+                          className={
+                            classes.socials +
+                            " fab fa-medium " +
+                            classes.btnMedium
+                          }
+                        />
+                      </Button>
+                      <Button
+                        justIcon
+                        color="transparent"
+                        className={classes.margin5}
+                        href="https://www.youtube.com/channel/UCNJ3Q0ikz6UMaM8bVp3fH5g"
+                        target="_blank"
+                      >
+                        <i
+                          className={
+                            classes.socials +
+                            " fab fa-youtube " +
+                            classes.btnYoutube
+                          }
+                        />
                       </Button>
                     </div>
                   </div>
