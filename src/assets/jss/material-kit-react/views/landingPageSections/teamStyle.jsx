@@ -39,6 +39,26 @@ const teamStyle = {
     fontSize: "20px",
     color: "#999"
   },
+  btnTwitter: {
+    color: "#55acee",
+    boxShadow: "none"
+  },
+  btnFacebook: {
+    color: "#3B5998",
+    boxShadow: "none"
+  },
+  btnGithub: {
+    color: "#24292e",
+    boxShadow: "none"
+  },
+  btnMedium: {
+    color: "black",
+    boxShadow: "none"
+  },
+  btnYoutube: {
+    color: "#FF0000",
+    boxShadow: "none"
+  },
   margin5: {
     margin: "5px"
   }

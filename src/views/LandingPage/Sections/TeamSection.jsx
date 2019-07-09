@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
+import { Link } from "react-router-dom";
 
 // core components
 import GridContainer from "components/Grid/GridContainer";
@@ -20,11 +20,6 @@ import team3 from "assets/img/faces/dai.jpg";
 class TeamSection extends React.Component {
   render() {
     const { classes } = this.props;
-    const imageClasses = classNames(
-      classes.imgRaised,
-      classes.imgRoundedCircle,
-      classes.imgFluid
-    );
 
     return (
       <div>
@@ -35,7 +30,7 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <img src={team1} alt="Jesse" className={imageClasses} />
+                    <img src={team1} alt="Jesse" className="img-thumbnail" />
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Jesse Katsumata
@@ -57,7 +52,13 @@ class TeamSection extends React.Component {
                       href="https://twitter.com/natural_clar"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-twitter"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-twitter " +
+                          classes.btnTwitter
+                        }
+                      />
                     </Button>
                     <Button
                       justIcon
@@ -66,7 +67,13 @@ class TeamSection extends React.Component {
                       href="https://github.com/Naturalclar"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-github"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-github " +
+                          classes.btnGithub
+                        }
+                      />
                     </Button>
                   </CardFooter>
                 </Card>
@@ -74,7 +81,7 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <img src={team2} alt="Farid" className={imageClasses} />
+                    <img src={team2} alt="Farid" className="img-thumbnail" />
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Farid Hammouten
@@ -84,8 +91,9 @@ class TeamSection extends React.Component {
                   <CardBody>
                     <p className={classes.description}>
                       JavaScript Engineer based in Osaka. Big Dreamer and love
-                      to exchange knowledge. Tech Stack: JavaScript, Node,
-                      React, (start Express & Mongo november 2018)
+                      to exchange knowledge. Tech Stack: Javascript, Nodejs,
+                      Reactjs, Express, Mongo db, PHP, Bootstrap, MUI, CTMKR,
+                      Python3
                     </p>
                   </CardBody>
                   <CardFooter className={classes.justifyCenter}>
@@ -96,7 +104,13 @@ class TeamSection extends React.Component {
                       href="https://twitter.com/Faridh212"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-twitter"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-twitter " +
+                          classes.btnTwitter
+                        }
+                      />
                     </Button>
                     <Button
                       justIcon
@@ -105,7 +119,13 @@ class TeamSection extends React.Component {
                       href="https://github.com/farid212"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-github"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-github " +
+                          classes.btnGithub
+                        }
+                      />
                     </Button>
                     <Button
                       justIcon
@@ -114,7 +134,28 @@ class TeamSection extends React.Component {
                       href="https://medium.com/@farid212"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-medium"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-medium " +
+                          classes.btnMedium
+                        }
+                      />
+                    </Button>
+                    <Button
+                      justIcon
+                      color="transparent"
+                      className={classes.margin5}
+                      href="https://www.youtube.com/channel/UCNJ3Q0ikz6UMaM8bVp3fH5g"
+                      target="_blank"
+                    >
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-youtube " +
+                          classes.btnYoutube
+                        }
+                      />
                     </Button>
                   </CardFooter>
                 </Card>
@@ -122,7 +163,7 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <Card plain>
                   <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                    <img src={team3} alt="Dai" className={imageClasses} />
+                    <img src={team3} alt="Dai" className="img-thumbnail" />
                   </GridItem>
                   <h4 className={classes.cardTitle}>
                     Dai Phan Tran
@@ -144,7 +185,13 @@ class TeamSection extends React.Component {
                       href="http://www.twitter.com/dai_webdesign"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-twitter"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-twitter " +
+                          classes.btnTwitter
+                        }
+                      />
                     </Button>
                     <Button
                       justIcon
@@ -153,7 +200,13 @@ class TeamSection extends React.Component {
                       href="http://www.facebook.com/dai.webdesign"
                       target="_blank"
                     >
-                      <i className={classes.socials + " fab fa-facebook"} />
+                      <i
+                        className={
+                          classes.socials +
+                          " fab fa-facebook " +
+                          classes.btnFacebook
+                        }
+                      />
                     </Button>
                   </CardFooter>
                 </Card>
