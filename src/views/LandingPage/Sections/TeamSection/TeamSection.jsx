@@ -10,7 +10,7 @@ import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/t
 import TeamMember from "./TeamMember";
 import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
-import team3 from "assets/img/faces/dai.jpg";
+import team3 from "assets/img/faces/oussama.jpg";
 
 class TeamSection extends React.Component {
   render() {
@@ -52,14 +52,15 @@ class TeamSection extends React.Component {
               <GridItem xs={12} sm={12} md={4}>
                 <TeamMember
                   teamImage={team3}
-                  altTeamImage="Dai"
-                  title="Dai Phan Tran"
+                  altTeamImage="Oussama"
+                  title="Oussama Ladhari"
                   titleName="Moderator"
-                  descriptionText="JOpen mind Web Designer based in France, love challenges
-                      and meeting new people, believe that image is better than
-                      word to express things."
-                  twitter="http://www.twitter.com/dai_webdesign"
-                  facebook="http://www.facebook.com/dai.webdesign"
+                  descriptionText="Junior full stack web developer based in Nara Japan.
+                  Father of 2 lovely daughters.
+                  Tech Stack: React, Python, Ruby, Django, Rails"
+                  linkedin="https://www.linkedin.com/in/oussama-ladhari/"
+                  github="https://github.com/oladhari"
+                  facebook="https://www.facebook.com/oussama.ladhari.9"
                 />
               </GridItem>
             </GridContainer>

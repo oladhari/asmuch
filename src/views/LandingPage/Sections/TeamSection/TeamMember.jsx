@@ -24,7 +24,8 @@ class TeamSection extends React.Component {
       twitter,
       github,
       medium,
-      facebook
+      facebook,
+      linkedin
     } = this.props;
     const imageClasses = classNames(
       classes.imgRaised,
@@ -88,6 +89,17 @@ class TeamSection extends React.Component {
               target="_blank"
             >
               <i className={classes.socials + " fab fa-facebook"} />
+            </Button>
+          ) : null}
+          {linkedin ? (
+            <Button
+              justIcon
+              color="transparent"
+              className={classes.margin5}
+              href={`${linkedin}`}
+              target="_blank"
+            >
+              <i className={classes.socials + " fab fa-linkedin-in"} />
             </Button>
           ) : null}
         </CardFooter>
