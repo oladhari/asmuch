@@ -10,7 +10,8 @@ import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/t
 import TeamMember from "./TeamMember";
 import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
-import team3 from "assets/img/faces/oussama.jpg";
+import team3 from "assets/img/faces/dai.jpg";
+import team4 from "assets/img/faces/oussama.jpg";
 
 class TeamSection extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class TeamSection extends React.Component {
           <h2 className={classes.title}>Here is our team</h2>
           <div>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={12} sm={12} md={3}>
                 <TeamMember
                   teamImage={team1}
                   title="Jesse Katsumata"
@@ -35,7 +36,7 @@ class TeamSection extends React.Component {
                   github="https://github.com/Naturalclar"
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={12} sm={12} md={3}>
                 <TeamMember
                   teamImage={team2}
                   altTeamImage="Farid"
@@ -49,9 +50,22 @@ class TeamSection extends React.Component {
                   medium="https://medium.com/@farid212"
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={12} sm={12} md={3}>
                 <TeamMember
                   teamImage={team3}
+                  title="Dai Phan Tran"
+                  altTeamImage="Dai"
+                  titleName="Moderator"
+                  descriptionText="Open mind Web Designer based in France, love challenges
+                      and meeting new people, believe that image is better than
+                      word to express things."
+                  twitter="http://www.twitter.com/dai_webdesign"
+                  facebook="http://www.facebook.com/dai.webdesign"
+                />
+              </GridItem>
+              <GridItem xs={12} sm={12} md={3}>
+                <TeamMember
+                  teamImage={team4}
                   altTeamImage="Oussama"
                   title="Oussama Ladhari"
                   titleName="Moderator"
