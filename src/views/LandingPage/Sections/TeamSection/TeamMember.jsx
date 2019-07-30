@@ -118,7 +118,8 @@ TeamSection.propTypes = {
   twitter: PropTypes.string,
   github: PropTypes.string,
   medium: PropTypes.string,
-  facebook: PropTypes.string
+  facebook: PropTypes.string,
+  linkedin: PropTypes.string
 };
 
 export default withStyles(teamStyle)(TeamSection);
