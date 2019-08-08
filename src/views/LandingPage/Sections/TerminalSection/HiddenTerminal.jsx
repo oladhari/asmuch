@@ -1,22 +1,15 @@
 /* eslint-disable react/require-render-return */
 import React, { Component } from "react";
 import Terminal from "react-bash";
-import propTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import fileSys from "./partials/fileSys";
 import Slide from "@material-ui/core/Slide";
 import Dialog from "@material-ui/core/Dialog";
 
 const history = [
-  { value: "Hackers will be high-fived. ( ‘-’)人(ﾟ_ﾟ )" },
+  { value: "This bash hide another secret in the web site." },
+  { value: "will you be able to find it?" },
   { value: "Type `help` to begin" }
 ];
-
-const style = {
-  block: {
-    height: "100vh"
-  }
-};
 
 function Transition(props) {
   return <Slide direct="down" {...props} />;
@@ -37,17 +30,11 @@ class HiddenTerminal extends Component {
   };
 
   render() {
-    const { classes } = this.props;
     let user_keys = [];
-    let konamiCode = "38,38,40,40,37,39,37,39,66,65";
-    let SS1 = [
-      "%cSecret #1",
-      "color: #fff; background: #f7d602; padding:10px ;font-size: 1.5em; line-height: 2.2em;"
-    ];
+    const konamiCode = "38,38,40,40,37,39,37,39,66,65";
     document.onkeydown = event => {
       user_keys.push(event.keyCode);
       if (user_keys.toString().indexOf(konamiCode) >= 0) {
-        window.console.log.apply(console, SS1);
         return this.setState({
           open: true
         });
@@ -55,7 +42,7 @@ class HiddenTerminal extends Component {
     };
 
     return (
-      <div className={classes.block}>
+      <div>
         <Dialog
           fullScreen
           open={this.state.open}
@@ -64,7 +51,7 @@ class HiddenTerminal extends Component {
           <Terminal
             onClose={this.handleClose}
             structure={fileSys}
-            prefix="root@web"
+            prefix="root@asmuch"
             history={history}
             theme={Terminal.Themes.DARK}
           />
@@ -74,8 +61,4 @@ class HiddenTerminal extends Component {
   }
 }
 
-HiddenTerminal.propTypes = {
-  classes: propTypes.object.isRequired
-};
-
-export default withStyles(style)(HiddenTerminal);
+export default HiddenTerminal;

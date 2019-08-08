@@ -6,6 +6,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 
+// links
+import { Link } from "react-router-dom";
+
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle";
 import TeamMember from "./TeamMember";
 import team1 from "assets/img/faces/jesse.jpg";
@@ -37,18 +40,20 @@ class TeamSection extends React.Component {
                 />
               </GridItem>
               <GridItem xs={12} sm={12} md={3}>
-                <TeamMember
-                  teamImage={team2}
-                  altTeamImage="Farid"
-                  title="Farid Hammouten"
-                  titleName="Founder"
-                  descriptionText="JavaScript Engineer based in Osaka. Big Dreamer and love
+                <Link to="/farid">
+                  <TeamMember
+                    teamImage={team2}
+                    altTeamImage="Farid"
+                    title="Farid Hammouten"
+                    titleName="CEO & ADMIN"
+                    descriptionText="JavaScript Engineer based in Osaka. Big Dreamer and love
                       to exchange knowledge. Tech Stack: JavaScript, Node,
-                      React, (start Express & Mongo november 2018)"
-                  twitter="https://twitter.com/Faridh212"
-                  github="https://github.com/farid212"
-                  medium="https://medium.com/@farid212"
-                />
+                      React, MongoDB, PHP and Rails"
+                    twitter="https://twitter.com/Faridh212"
+                    github="https://github.com/farid212"
+                    medium="https://medium.com/@farid212"
+                  />
+                </Link>
               </GridItem>
               <GridItem xs={12} sm={12} md={3}>
                 <TeamMember

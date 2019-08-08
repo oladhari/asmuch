@@ -1,4 +1,4 @@
-var http = require("http");
+import { get } from "http";
 setInterval(function() {
-  http.get("http://asmuch.herokuapp.com");
+  get("http://asmuch.herokuapp.com");
 }, 600000); // every 10 minutes (300000)

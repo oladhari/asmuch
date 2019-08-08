@@ -1,14 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
 // core components
-import Dialog from "@material-ui/core/Dialog";
-import AppBar from "@material-ui/core/AppBar";
-import ToolBar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
 import Grid from "@material-ui/core/Grid";
 
 //expansion component
@@ -50,23 +45,9 @@ const styles = theme => ({
 });
 
 function ExoPage(props) {
-  const { classes } = this.props;
+  const { classes } = props;
   return (
     <div>
-      <AppBar className={classes.appBar}>
-        <ToolBar>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            Skillz Project
-          </Typography>
-          <IconButton
-            color="inherit"
-            onClick={this.handleClose}
-            aria-label="close"
-          >
-            <CloseIcon />
-          </IconButton>
-        </ToolBar>
-      </AppBar>
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid item xs={12} className={classes.root}>
           {TableExo[0].map((exercice, keyLvl1) => {

@@ -5,9 +5,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 
-// links
-import { Link } from "react-router-dom";
-
 // core components
 import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
@@ -17,13 +14,14 @@ import Button from "components/CustomButtons/Button";
 import HeaderLinks from "components/Header/HeaderLinks";
 import Parallax from "components/Parallax/Parallax";
 
+// JSS style
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
 import TeamSection from "./Sections/TeamSection/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
-import HiddenSection from "./Sections/HiddenSection.jsx";
+import HiddenSection from "./Sections/TerminalSection/HiddenTerminal.jsx";
 
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -39,18 +37,6 @@ class LandingPage extends React.Component {
       open: false
     };
   }
-
-  handleClose = () => {
-    this.setState({
-      open: !this.state.open
-    });
-  };
-
-  handleOpen = () => {
-    this.setState({
-      open: !this.state.open
-    });
-  };
 
   render() {
     const { classes, ...rest } = this.props;
@@ -73,12 +59,10 @@ class LandingPage extends React.Component {
             <div className={classes.container}>
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={12}>
-                  <h1 className={classes.title}>
-                    Asmuch, commitment through Developer community.
-                  </h1>
+                  <h1 className={classes.title}>As Much 何とか</h1>
                   <h2 className={classes.subtitle}>
-                    A rare place to find rare people, who are willing to do hard
-                    thinking, to work and to learn together.
+                    a rare place to find people like you, who want to do things
+                    differently.
                   </h2>
                 </GridItem>
                 <GridItem
@@ -98,19 +82,6 @@ class LandingPage extends React.Component {
                   >
                     Direct connect to Slack Community
                   </Button>
-                </GridItem>
-                <GridItem
-                  id="termGame"
-                  xs={8}
-                  sm={8}
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Link to="/terminal" className={classes.link}>
-                    <Button color="info">play with the terminal</Button>
-                  </Link>
                 </GridItem>
               </GridContainer>
             </div>
