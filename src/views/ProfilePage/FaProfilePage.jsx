@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -33,7 +34,7 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import profilePageStyle from "../../assets/jss/material-kit-react/views/profilePage.jsx";
 
-class ProfilePage extends React.Component {
+class FaProfilePage extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     const imageClasses = classNames(
@@ -267,4 +268,8 @@ class ProfilePage extends React.Component {
   }
 }
 
-export default withStyles(profilePageStyle)(ProfilePage);
+FaProfilePage.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.string)
+};
+
+export default withStyles(profilePageStyle)(FaProfilePage);
