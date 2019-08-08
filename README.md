@@ -67,6 +67,3 @@ Give a ⭐️ if this project helped you!
 Copyright © 2019 [Farid Hammouten](https://github.com/farid212).
 
 This project is [MIT](https://github.com/asmuch/asmuch/blob/master/LICENSE.md) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

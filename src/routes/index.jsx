@@ -1,9 +1,11 @@
-import LandingPage from "views/LandingPage/LandingPage";
-import TerminalPage from "views/TerminalPage/TerminalPage";
+import LandingPage from "../views/LandingPage/LandingPage";
+import ExoPage from "../views/ExoPage/ExoPage.jsx";
+import FaProfilePage from "../views/ProfilePage/FaProfilePage";
 
 var indexRoutes = [
   { path: "/", name: "LandingPage", component: LandingPage },
-  { path: "/terminal", name: "TerminalPage", component: TerminalPage }
+  { path: "/exo", name: "ExoPage", component: ExoPage },
+  { path: "/farid", name: "ProfilePage", component: FaProfilePage }
 ];
 
 export default indexRoutes;
