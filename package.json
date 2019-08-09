@@ -4,22 +4,22 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "build": "yarn build-css && react-scripts build",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "build-package": "npm run build-package-css && babel src --out-dir dist",
-    "build-package-css": "node-sass-chokidar src/assets/scss/material-kit-react.scss dist/material-kit-react.css",
+    "watch-css": "yarn build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "prepare": "yarn build",
+    "start": "node index.js",
+    "watch": "npm-run-all -p watch-css start-js",
+    "build": "yarn build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test:ci": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "lint": "yarn lint:check",
     "lint:check": "eslint src --ext=js,jsx",
     "lint:fix": "eslint src --ext=js,jsx --fix",
-    "prepare": "yarn build",
-    "start": "node index.js",
-    "start-js": "react-scripts start",
-    "test": "react-scripts test --env=jsdom",
-    "test:ci": "CI=true react-scripts test --env=jsdom",
-    "watch": "npm-run-all -p watch-css start-js",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && yarn install && yarn build",
+    "build-package-css": "node-sass-chokidar src/assets/scss/material-kit-react.scss dist/material-kit-react.css",
+    "build-package": "yarn build-package-css && babel src --out-dir dist"
   },
   "dependencies": {
     "@material-ui/core": "3.1.1",
@@ -44,7 +44,8 @@
     "react-scripts": "1.1.5",
     "react-slick": "0.23.1",
     "react-swipeable-views": "0.13.0",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "webpack-dev-server": "^3.7.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
