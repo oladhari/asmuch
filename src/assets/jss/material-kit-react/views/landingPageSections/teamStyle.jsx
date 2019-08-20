@@ -59,6 +59,16 @@ const teamStyle = {
     color: "#FF0000",
     boxShadow: "none"
   },
+  btnLinkedin: {
+    color: "#0976b4",
+    boxShadow: "none"
+  },
+  btnInstagram: {
+    background:
+      "linear-gradient(#405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)",
+    color: "white",
+    borderRadius: "4px"
+  },
   margin5: {
     margin: "5px"
   }
