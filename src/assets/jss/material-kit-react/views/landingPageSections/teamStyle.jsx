@@ -31,13 +31,19 @@ const teamStyle = {
   socials: {
     marginTop: "0",
     width: "100%",
-    transform: "none",
     left: "0",
     top: "0",
     height: "100%",
     lineHeight: "41px",
     fontSize: "20px",
-    color: "#999"
+    /* For Safari 3.1 to 6.0 */
+    "-webkit-transition": "opacity 0.5s, font-size 0.5s",
+    transition: "opacity 0.5s, font-size 0.5s",
+    opacity: "0.5",
+    "&:hover": {
+      opacity: "1",
+      fontSize: "35px"
+    }
   },
   btnTwitter: {
     color: "#55acee",

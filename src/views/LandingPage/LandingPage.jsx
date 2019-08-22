@@ -10,7 +10,6 @@ import Header from "components/Header/Header";
 import Footer from "components/Footer/Footer";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import Button from "components/CustomButtons/Button";
 import HeaderLinks from "components/Header/HeaderLinks";
 import Parallax from "components/Parallax/Parallax";
 
@@ -19,7 +18,6 @@ import landingPageStyle from "assets/jss/material-kit-react/views/landingPage";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.jsx";
-import TeamSection from "./Sections/TeamSection/TeamSection.jsx";
 import WorkSection from "./Sections/WorkSection.jsx";
 import HiddenSection from "./Sections/TerminalSection/HiddenTerminal.jsx";
 
@@ -31,13 +29,6 @@ const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];
 
 class LandingPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      open: false
-    };
-  }
-
   render() {
     const { classes, ...rest } = this.props;
     return (
@@ -57,31 +48,26 @@ class LandingPage extends React.Component {
           />
           <Parallax filter image={require("assets/img/bg8.jpg")}>
             <div className={classes.container}>
-              <GridContainer justify="center">
-                <GridItem xs={12} sm={12} md={12}>
-                  <h1 className={classes.title}>As Much 何とか</h1>
+              <GridContainer>
+                <GridItem xs={12} sm={12} md={6}>
+                  <h1 className={classes.title}>Your Story start with us</h1>
                   <h2 className={classes.subtitle}>
-                    a rare place to find people like you, who want to do things
-                    differently.
+                    As much 何とか is a little group of people who want to be
+                    unique in there way to work or share knowledge with other
+                    people around the world. We would like to contribute in a
+                    new way that may help as many people as possible.
                   </h2>
                 </GridItem>
-                <GridItem
-                  xs={8}
-                  sm={8}
-                  container
-                  direction="row"
-                  justify="center"
-                  alignItems="center"
-                >
-                  <Button
-                    variant="contained"
-                    color="info"
-                    href="https://join.slack.com/t/asmuchnantoka/shared_invite/enQtNDk3OTMyMjY1MzkzLTA2YTc0Y2YzZWE5NGZlMmQyODJkMjEzY2ZjYzZiZmY2NTdmNDg2ODQzMDdlYWEyNDRiOGI4OWM1MjY2ZWI5YWU"
-                    target="_blank"
-                    size="lg"
-                  >
-                    Direct connect to Slack Community
-                  </Button>
+                <GridItem xs={12} sm={12} md={6}>
+                  <iframe
+                    title="Test"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/5C1Dfsur4CI?rel=0&amp;showinfo=0"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </GridItem>
               </GridContainer>
             </div>
@@ -90,7 +76,6 @@ class LandingPage extends React.Component {
             <div className={classes.container}>
               <HiddenSection />
               <ProductSection />
-              <TeamSection />
               <WorkSection />
             </div>
           </div>

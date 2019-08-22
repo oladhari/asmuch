@@ -22,7 +22,7 @@
     "build-package": "yarn build-package-css && babel src --out-dir dist"
   },
   "dependencies": {
-    "@material-ui/core": "3.1.1",
+    "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^3.0.1",
     "@material-ui/styles": "^3.0.0-alpha.10",
     "@material-ui/system": "^3.0.0-alpha.2",
@@ -40,7 +40,7 @@
     "react-bash": "^1.6.0",
     "react-datetime": "2.15.0",
     "react-dom": "^16.8.6",
-    "react-router-dom": "4.3.1",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "1.1.5",
     "react-slick": "0.23.1",
     "react-swipeable-views": "0.13.0",

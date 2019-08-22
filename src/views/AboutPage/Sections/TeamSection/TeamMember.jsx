@@ -25,7 +25,8 @@ class TeamSection extends React.Component {
       github,
       medium,
       facebook,
-      linkedin
+      linkedin,
+      youtube
     } = this.props;
     const imageClasses = classNames(
       classes.imgRaised,
@@ -55,7 +56,12 @@ class TeamSection extends React.Component {
               href={`${twitter}`}
               target="_blank"
             >
-              <i className={classes.socials + " fab fa-twitter"} />
+              <i
+                className={
+                  classNames(classes.socials, classes.btnTwitter) +
+                  " fab fa-twitter"
+                }
+              />
             </Button>
           ) : null}
           {github ? (
@@ -66,7 +72,12 @@ class TeamSection extends React.Component {
               href={`${github}`}
               target="_blank"
             >
-              <i className={classes.socials + " fab fa-github"} />
+              <i
+                className={
+                  classNames(classes.btnGithub, classes.socials) +
+                  " fab fa-github"
+                }
+              />
             </Button>
           ) : null}
           {medium ? (
@@ -77,7 +88,12 @@ class TeamSection extends React.Component {
               href={`${medium}`}
               target="_blank"
             >
-              <i className={classes.socials + " fab fa-medium"} />
+              <i
+                className={
+                  classNames(classes.btnMedium, classes.socials) +
+                  " fab fa-medium"
+                }
+              />
             </Button>
           ) : null}
           {facebook ? (
@@ -88,7 +104,12 @@ class TeamSection extends React.Component {
               href={`${facebook}`}
               target="_blank"
             >
-              <i className={classes.socials + " fab fa-facebook"} />
+              <i
+                className={
+                  classNames(classes.btnFacebook, classes.socials) +
+                  " fab fa-facebook"
+                }
+              />
             </Button>
           ) : null}
           {linkedin ? (
@@ -99,7 +120,29 @@ class TeamSection extends React.Component {
               href={`${linkedin}`}
               target="_blank"
             >
-              <i className={classes.socials + " fab fa-linkedin-in"} />
+              <i
+                className={
+                  classNames(classes.btnLinkedin, classes.socials) +
+                  " fab fa-linkedin-in"
+                }
+              />
+            </Button>
+          ) : null}
+          {youtube ? (
+            <Button
+              justIcon
+              color="transparent"
+              className={classes.margin5}
+              href={`${youtube}`}
+              target="_blank"
+              noopener
+            >
+              <i
+                className={
+                  classNames(classes.btnYoutube, classes.socials) +
+                  " fab fa-youtube"
+                }
+              />
             </Button>
           ) : null}
         </CardFooter>
@@ -119,7 +162,8 @@ TeamSection.propTypes = {
   github: PropTypes.string,
   medium: PropTypes.string,
   facebook: PropTypes.string,
-  linkedin: PropTypes.string
+  linkedin: PropTypes.string,
+  youtube: PropTypes.string
 };
 
 export default withStyles(teamStyle)(TeamSection);
