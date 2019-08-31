@@ -50,20 +50,21 @@ const styles = {
   },
   box: {
     boxSizing: "border-box",
-    paddingLeft: "15px",
-    paddingRight: "15px"
+    padding: "10px"
   },
   blueBox3: {
-    backgroundColor: "lightBlue",
     height: "250px"
   },
   blueBox2: {
-    backgroundColor: "lightBlue",
-    height: "350px",
-    marginBottom: "10vh"
+    height: "350px"
   },
   grayShadow: {
-    boxShadow: "5px 5px 10px gray"
+    boxShadow: "5px 5px 10px gray",
+    padding: "10px 0"
+  },
+  imgContent: {
+    height: "100%",
+    width: "100%"
   }
 };
 
@@ -79,61 +80,61 @@ const OfficeSection = props => {
             </h2>
           </GridItem>
         </GridContainer>
-        <GridContainer justify="center">
+        <GridContainer justify="center" className={classes.grayShadow}>
           <GridItem
             xs={12}
             sm={4}
-            className={classNames(
-              classes.box,
-              classes.blueBox3,
-              classes.grayShadow
-            )}
+            className={classNames(classes.box, classes.blueBox3)}
           >
-            <img src={tile.office1.img} alt={tile.office1.title} />
+            <img
+              className={classes.imgContent}
+              src={tile.office1.img}
+              alt={tile.office1.title}
+            />
           </GridItem>
           <GridItem
             xs={12}
             sm={4}
-            className={classNames(
-              classes.box,
-              classes.blueBox3,
-              classes.grayShadow
-            )}
+            className={classNames(classes.box, classes.blueBox3)}
           >
-            <img src={tile.office2.img} alt={tile.office2.title} />
+            <img
+              className={classes.imgContent}
+              src={tile.office2.img}
+              alt={tile.office2.title}
+            />
           </GridItem>
           <GridItem
             xs={12}
             sm={4}
-            className={classNames(
-              classes.box,
-              classes.blueBox3,
-              classes.grayShadow
-            )}
+            className={classNames(classes.box, classes.blueBox3)}
           >
-            {/* <img src={tile.office3.img} alt={tile.office3.title} /> */}
+            <img
+              className={classes.imgContent}
+              src={tile.office3.img}
+              alt={tile.office3.title}
+            />
           </GridItem>
           <GridItem
             xs={12}
             sm={6}
-            className={classNames(
-              classes.box,
-              classes.blueBox2,
-              classes.grayShadow
-            )}
+            className={classNames(classes.box, classes.blueBox2)}
           >
-            {/* <img src={tile.office4.img} alt={tile.office4.title} /> */}
+            <img
+              className={classes.imgContent}
+              src={tile.office4.img}
+              alt={tile.office4.title}
+            />
           </GridItem>
           <GridItem
             xs={12}
             sm={6}
-            className={classNames(
-              classes.box,
-              classes.blueBox2,
-              classes.grayShadow
-            )}
+            className={classNames(classes.box, classes.blueBox2)}
           >
-            {/* <img src={tile.office5.img} alt={tile.office5.title} /> */}
+            <img
+              className={classes.imgContent}
+              src={tile.office5.img}
+              alt={tile.office5.title}
+            />
           </GridItem>
         </GridContainer>
       </Container>

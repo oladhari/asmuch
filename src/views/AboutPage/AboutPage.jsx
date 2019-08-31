@@ -13,9 +13,6 @@ import HeaderLinks from "components/Header/HeaderLinks";
 import Parallax from "components/Parallax/Parallax";
 import Container from "@material-ui/core/Container";
 
-// JSS style
-import aboutPageStyle from "assets/jss/material-kit-react/views/aboutPage";
-
 // Sections for this page
 import TeamSection from "./Sections/TeamSection/TeamSection.jsx";
 import OfficeSection from "./Sections/OfficeSection/OfficeSection.jsx";
@@ -23,6 +20,21 @@ import OfficeSection from "./Sections/OfficeSection/OfficeSection.jsx";
 // Section Mobile UI
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import theme from "assets/jss/material-kit-react/views/componentsSections/theme";
+
+// Style
+const aboutPageStyle = {
+  main: {
+    background: "#FFFFFF",
+    position: "relative",
+    zIndex: "3"
+  },
+  mainRaised: {
+    margin: "-60px 30px 0px",
+    borderRadius: "6px",
+    boxShadow:
+      "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
+  }
+};
 
 const muiTheme = createMuiTheme(theme);
 const dashboardRoutes = [];

@@ -37,12 +37,12 @@ const teamStyle = {
     lineHeight: "41px",
     fontSize: "20px",
     /* For Safari 3.1 to 6.0 */
-    "-webkit-transition": "opacity 0.5s, font-size 0.5s",
-    transition: "opacity 0.5s, font-size 0.5s",
+    "-webkit-transition": "opacity 0.5s, transform 0.5s",
+    transition: "opacity 0.5s, transform 0.5s",
     opacity: "0.5",
     "&:hover": {
       opacity: "1",
-      fontSize: "35px"
+      transform: "scale(1.5) !important"
     }
   },
   btnTwitter: {

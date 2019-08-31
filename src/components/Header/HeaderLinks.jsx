@@ -8,7 +8,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // import Button from "components/CustomButtons/Button.jsx";
 // import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
-import footerStyle from "assets/jss/material-kit-react/components/footerStyle.jsx";
+import headerStyle from "assets/jss/material-kit-react/components/headerStyle.jsx";
 
 
 function HeaderLinks ({...props}){
@@ -49,4 +49,4 @@ function HeaderLinks ({...props}){
     )
 };
 
-export default withStyles(footerStyle)(HeaderLinks);
+export default withStyles(headerStyle)(HeaderLinks);
