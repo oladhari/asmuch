@@ -35,7 +35,7 @@ const footerStyle = {
     float: "right!important"
   },
   footer: {
-    padding: "0.9375rem 0",
+    padding: "2rem 0",
     textAlign: "center",
     display: "flex",
     zIndex: "2",
@@ -112,7 +112,7 @@ function Footer({ ...props }) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <Link
-                to="/licences"
+                to="/licenses"
                 className={classes.block}
               >
                 Licenses

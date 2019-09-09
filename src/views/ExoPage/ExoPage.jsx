@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
+import { Link } from "react-router-dom";
 
 // core components
 import { CssBaseline } from "@material-ui/core";
@@ -37,8 +38,16 @@ const styles = theme => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular
   },
+  title: {
+    fontSize: "20px",
+    fontWeight: "bolder"
+  },
+  link: {
+    color: "white",
+    fontWeight: "bold"
+  },
   subTitle: {
-    marginLeft: "10px",
+    marginLeft: "20px",
     marginTop: "5px",
     marginBottom: "5px",
     fontWeight: 500
@@ -72,12 +81,17 @@ function ExoPage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="As much 何とか"
+        brand={
+          <Link to="/" className={classes.link}>
+            As much何とか
+          </Link>
+        }
         rightLinks={<HeaderLinks />}
         fixed
         changeColorsOnScroll={{
           height: 400,
-          color: "white"
+          color: "black",
+          backgroundColor: "white"
         }}
       />
       <Parallax filter image={require("assets/img/bg8.jpg")} />
@@ -88,7 +102,11 @@ function ExoPage(props) {
               return (
                 <ExpansionPanel key={keyLvl1}>
                   <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="title" gutterBottom>
+                    <Typography
+                      variant="title"
+                      gutterBottom
+                      className={classes.title}
+                    >
                       {exercice.title}
                     </Typography>
                   </ExpansionPanelSummary>
@@ -105,12 +123,14 @@ function ExoPage(props) {
                         {partExo.descript.map((explication, keyLvl3) => {
                           return (
                             <Grid item key={keyLvl3}>
-                              <Typography
-                                component="p"
-                                className={classes.explication}
-                              >
-                                {explication}
-                              </Typography>
+                              <ul>
+                                <Typography
+                                  component="li"
+                                  className={classes.explication}
+                                >
+                                  {explication}
+                                </Typography>
+                              </ul>
                             </Grid>
                           );
                         })}

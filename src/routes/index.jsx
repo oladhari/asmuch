@@ -6,6 +6,7 @@ import DaiProfilePage from "../views/ProfilePage/DaiProfilePage/DaiProfilePage.j
 import OussProfilePage from "../views/ProfilePage/OussProfilePage/OussProfilePage.jsx";
 import AboutPage from "../views/AboutPage/AboutPage.jsx";
 import ErrorPage from "../views/ErrorPage/ErroPage.jsx";
+import LicensesPage from "../views/LicensesPage/LicensesPage.jsx";
 
 var indexRoutes = [
   {
@@ -42,6 +43,11 @@ var indexRoutes = [
     path: "/about",
     name: "AboutPage",
     component: AboutPage
+  },
+  {
+    path: "/licenses",
+    name: "LicensesPage",
+    component: LicensesPage
   },
   {
     path: "",
