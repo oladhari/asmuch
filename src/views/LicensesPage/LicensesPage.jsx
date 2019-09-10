@@ -14,6 +14,11 @@ import Parallax from "components/Parallax/Parallax";
 // Style
 import { container } from "assets/jss/material-kit-react";
 
+// text
+import EnglishPage from "./sections/english";
+import FrenchPage from "./sections/french";
+import SpainPage from "./sections/spain";
+
 const licencesStyle = {
   container: {
     zIndex: "12",
@@ -31,19 +36,20 @@ const licencesStyle = {
     boxShadow:
       "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
   },
-  root: {
-    width: "100%"
+  licenceField: {
+    padding: "3em",
+    textAlign: "justify",
+    fontFamily: "monospace"
+  },
+  button: {
+    margin: "10px"
   }
 };
 
 const dashboardRoutes = [];
 
-// const Transition = (direction, props) => {
-//   return <slide direct={direction} {...props} />;
-// };
-
 function LicensesPage(props) {
-  const [language, setLanguage] = useState("EN");
+  const [language, setLanguage] = useState(EnglishPage);
   const { classes, ...rest } = props;
   return (
     <React.Fragment>
@@ -62,13 +68,37 @@ function LicensesPage(props) {
       />
       <Parallax filter image={require("assets/img/agree.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <Grid containe direction="column" justify="center" alignItems="center">
-          <Grid item xs={12} className={classes.root}>
-            <p> Actual language = {language}</p>
-            <button onClick={() => setLanguage("FR")}>FR</button>
-            <button onClick={() => setLanguage("JP")}>JP</button>
-            <button onClick={() => setLanguage("EN")}>EN</button>
-            <button onClick={() => setLanguage("ES")}>ES</button>
+        <Grid container>
+          <Grid item direction="row" xs={12} alignContent="center">
+            <div>
+              <button
+                type="button"
+                className={classes.button}
+                onClick={() => setLanguage(EnglishPage)}
+              >
+                En
+              </button>
+              <button
+                className={classes.button}
+                onClick={() => setLanguage(FrenchPage)}
+              >
+                FR
+              </button>
+              <button
+                className={classes.button}
+                onClick={() => setLanguage(SpainPage)}
+              >
+                ES
+              </button>
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <div
+              className={classes.licenceField}
+              dangerouslySetInnerHTML={{
+                __html: language
+              }}
+            />
           </Grid>
         </Grid>
       </div>
