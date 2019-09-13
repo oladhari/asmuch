@@ -72,11 +72,10 @@ function LicensesPage(props) {
           <Grid item direction="row" xs={12} alignContent="center">
             <div>
               <button
-                type="button"
-                className={classes.button}
                 onClick={() => setLanguage(EnglishPage)}
+                className={classes.button}
               >
-                En
+                EN
               </button>
               <button
                 className={classes.button}
