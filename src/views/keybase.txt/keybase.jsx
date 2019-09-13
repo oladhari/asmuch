@@ -1,4 +1,6 @@
-==================================================================
+import React from "react";
+
+const prove = `==================================================================
 https://keybase.io/farid212
 --------------------------------------------------------------------
 
@@ -53,4 +55,14 @@ appending to this document.
 
 View my publicly-auditable identity here: https://keybase.io/farid212
 
-==================================================================
+==================================================================`;
+
+const keybase = () => {
+  return (
+    <React.Fragment>
+      <p>{prove}</p>
+    </React.Fragment>
+  );
+};
+
+export default keybase;
