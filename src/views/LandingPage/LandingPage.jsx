@@ -87,7 +87,7 @@ class LandingPage extends React.Component {
           <Parallax filter image={require("assets/img/bg8.jpg")}>
             <div className={classes.container}>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12}>
                   <h1 className={classes.title}>Your Story start with us</h1>
                   <h2 className={classes.subtitle}>
                     As much 何とか is a little group of people who want to be
@@ -95,17 +95,6 @@ class LandingPage extends React.Component {
                     people around the world. We would like to contribute in a
                     new way that may help as many people as possible.
                   </h2>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
-                  <iframe
-                    title="Test"
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/5C1Dfsur4CI?rel=0&amp;showinfo=0"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
                 </GridItem>
               </GridContainer>
             </div>

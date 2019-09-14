@@ -120,13 +120,19 @@ const profilePageStyle = {
   socials: {
     marginTop: "0",
     width: "100%",
-    transform: "none",
     left: "0",
     top: "0",
     height: "100%",
     lineHeight: "41px",
     fontSize: "20px",
-    color: "#999"
+    /* For Safari 3.1 to 6.0 */
+    "-webkit-transition": "opacity 0.5s, transform 0.5s",
+    transition: "opacity 0.5s, transform 0.5s",
+    opacity: "0.5",
+    "&:hover": {
+      opacity: "1",
+      transform: "scale(1.5) !important"
+    }
   },
   navWrapper: {
     margin: "20px auto 50px auto",
@@ -181,7 +187,26 @@ class FaProfilePage extends React.Component {
             {...rest}
           />
         </Link>
-        <Parallax small filter image={require("assets/img/farid-bg.jpg")} />
+        <Parallax filter image={require("assets/img/farid-bg.jpg")}>
+          <div className={classes.container}>
+            <GridContainer>
+              <GridItem xs={12}>
+                <h2>I love this song</h2>
+              </GridItem>
+              <GridItem xs={12}>
+                <iframe
+                  title="Test"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/5C1Dfsur4CI?rel=0&amp;showinfo=0"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </GridItem>
+            </GridContainer>
+          </div>
+        </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div className={classes.container}>
