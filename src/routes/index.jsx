@@ -1,7 +1,6 @@
 import LandingPage from "../views/LandingPage/LandingPage.jsx";
-import ExoPage from "../views/ExoPage/ExoPage.jsx";
+import BlogPage from "../views/BlogPage/BlogPage.jsx";
 import FaProfilePage from "../views/ProfilePage/FaProfilePage/FaProfilePage.jsx";
-import JessProfilePage from "../views/ProfilePage/JessProfilePage/JessProfilePage.jsx";
 import DaiProfilePage from "../views/ProfilePage/DaiProfilePage/DaiProfilePage.jsx";
 import OussProfilePage from "../views/ProfilePage/OussProfilePage/OussProfilePage.jsx";
 import AboutPage from "../views/AboutPage/AboutPage.jsx";
@@ -15,19 +14,14 @@ var indexRoutes = [
     component: LandingPage
   },
   {
-    path: "/exo",
+    path: "/blog",
     name: "ExoPage",
-    component: ExoPage
+    component: BlogPage
   },
   {
     path: "/profile/farid",
     name: "Farid-Profile",
     component: FaProfilePage
-  },
-  {
-    path: "/profile/jesse",
-    name: "Jesse-Profile",
-    component: JessProfilePage
   },
   {
     path: "/profile/dai",

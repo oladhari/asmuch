@@ -1,6 +1,6 @@
 /*eslint-disable*/ 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 // @MUI core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -32,7 +32,7 @@ const headerLinkStyle = {
 }
 
 
-function HeaderLinks ({...props}){
+function HeaderLinks (props){
     const { classes } = props;
     return (
         <List className={classes.list}>
@@ -47,23 +47,8 @@ function HeaderLinks ({...props}){
                 </Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-                <Link to="/EXO" className={classes.block}>
-                    EXO
-                </Link>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-                <Link to="/services" className={classes.block}>
-                    SERVICES
-                </Link>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-                <Link to="/kids" className={classes.block}>
-                    KIDS
-                </Link>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-                <Link to="/otona" className={classes.block}>
-                    ADULTS
+                <Link to="/blog" className={classes.block}>
+                    BLOG
                 </Link>
             </ListItem>
         </List>

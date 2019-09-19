@@ -40,6 +40,7 @@
     "react-bash": "^1.6.0",
     "react-datetime": "2.15.0",
     "react-dom": "^16.8.6",
+    "react-instagram-embed": "^1.5.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "1.1.5",
     "react-slick": "0.23.1",

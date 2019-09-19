@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { CssBaseline } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import Container from "@material-ui/core/Container";
 import Header from "components/Header/Header";
 import HeaderLinks from "components/Header/HeaderLinks";
 import Parallax from "components/Parallax/Parallax";
@@ -17,6 +18,8 @@ import Footer from "components/Footer/Footer";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
+import { title } from "assets/jss/material-kit-react";
 
 //exercice
 import TableExo from "assets/js/table";
@@ -37,6 +40,22 @@ const styles = theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular
+  },
+  headerTitle: {
+    ...title,
+    display: "inline-block",
+    position: "relative",
+    color: "white",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem"
+    }
+  },
+  headerSubtitle: {
+    margin: "10px auto 50px",
+    color: "white",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem"
+    }
   },
   title: {
     fontSize: "20px",
@@ -73,7 +92,7 @@ const styles = theme => ({
 
 const dashboardRoutes = [];
 
-function ExoPage(props) {
+function BlogPage(props) {
   const { classes } = props;
   return (
     <React.Fragment>
@@ -90,11 +109,17 @@ function ExoPage(props) {
         fixed
         changeColorsOnScroll={{
           height: 400,
-          color: "black",
-          backgroundColor: "white"
+          color: "white"
         }}
       />
-      <Parallax filter image={require("assets/img/bg8.jpg")} />
+      <Parallax filter image={require("assets/img/bg8.jpg")}>
+        <Container>
+          <Grid item xs={12}>
+            <h1 className={classes.headerTitle}>Wanna learn JavaScript?</h1>
+            <h2 className={classes.headerSubtitle}>pick your poison</h2>
+          </Grid>
+        </Container>
+      </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <Grid container direction="column" justify="center" alignItems="center">
           <Grid item xs={12} className={classes.root}>
@@ -148,8 +173,8 @@ function ExoPage(props) {
   );
 }
 
-ExoPage.propTypes = {
+BlogPage.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ExoPage);
+export default withStyles(styles)(BlogPage);

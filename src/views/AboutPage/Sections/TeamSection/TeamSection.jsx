@@ -127,7 +127,11 @@ class TeamSection extends React.Component {
                 </Link>
               </GridItem>
               <GridItem xs={12} sm={5} md={3}>
-                <Link to="/profile/jesse">
+                <a
+                  href="https://naturalclar.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TeamMember
                     teamImage={team1}
                     title="Jesse Katsumata"
@@ -139,7 +143,7 @@ class TeamSection extends React.Component {
                     twitter="https://twitter.com/natural_clar"
                     github="https://github.com/Naturalclar"
                   />
-                </Link>
+                </a>
               </GridItem>
               <GridItem xs={12} sm={5} md={3}>
                 <Link to="/profile/dai">
