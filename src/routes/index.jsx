@@ -15,7 +15,7 @@ var indexRoutes = [
   },
   {
     path: "/blog",
-    name: "ExoPage",
+    name: "BlogPage",
     component: BlogPage
   },
   {
