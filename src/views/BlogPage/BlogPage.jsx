@@ -112,7 +112,7 @@ function BlogPage(props) {
           color: "white"
         }}
       />
-      <Parallax filter image={require("assets/img/bg8.jpg")}>
+      <Parallax filter image={require("assets/img/blog.jpg")}>
         <Container>
           <Grid item xs={12}>
             <h1 className={classes.headerTitle}>Wanna learn JavaScript?</h1>
