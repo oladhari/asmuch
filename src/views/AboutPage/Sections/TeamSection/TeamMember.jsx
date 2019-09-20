@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import withStyles from "@material-ui/core/styles/withStyles";
+import { Link } from "react-router-dom";
 
 // core components
 import GridItem from "components/Grid/GridItem";
@@ -106,7 +107,9 @@ class TeamSection extends React.Component {
       medium,
       facebook,
       linkedin,
-      youtube
+      youtube,
+      link,
+      hrefLink
     } = this.props;
     const imageClasses = classNames(
       classes.imgRaised,
@@ -116,17 +119,43 @@ class TeamSection extends React.Component {
 
     return (
       <Card plain>
-        <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-          <img src={teamImage} alt={altTeamImage} className={imageClasses} />
-        </GridItem>
-        <h4 className={classes.cardTitle}>
-          {title}
-          <br />
-          <small className={classes.smallTitle}>{titleName}</small>
-        </h4>
-        <CardBody>
-          <p className={classes.description}>{descriptionText}</p>
-        </CardBody>
+        {link ? (
+          <Link to={`${link}`}>
+            <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+              <img
+                src={teamImage}
+                alt={altTeamImage}
+                className={imageClasses}
+              />
+            </GridItem>
+            <h4 className={classes.cardTitle}>
+              {title}
+              <br />
+              <small className={classes.smallTitle}>{titleName}</small>
+            </h4>
+            <CardBody>
+              <p className={classes.description}>{descriptionText}</p>
+            </CardBody>
+          </Link>
+        ) : (
+          <a href={`${hrefLink}`} target="_blank" rel="noopener noreferrer">
+            <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+              <img
+                src={teamImage}
+                alt={altTeamImage}
+                className={imageClasses}
+              />
+            </GridItem>
+            <h4 className={classes.cardTitle}>
+              {title}
+              <br />
+              <small className={classes.smallTitle}>{titleName}</small>
+            </h4>
+            <CardBody>
+              <p className={classes.description}>{descriptionText}</p>
+            </CardBody>
+          </a>
+        )}
         <CardFooter className={classes.justifyCenter}>
           {twitter ? (
             <Button
@@ -243,7 +272,9 @@ TeamSection.propTypes = {
   medium: PropTypes.string,
   facebook: PropTypes.string,
   linkedin: PropTypes.string,
-  youtube: PropTypes.string
+  youtube: PropTypes.string,
+  link: PropTypes.string,
+  hrefLink: PropTypes.string
 };
 
 export default withStyles(teamStyle)(TeamSection);

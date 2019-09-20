@@ -7,9 +7,6 @@ import Container from "@material-ui/core/Container";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 
-// links
-import { Link } from "react-router-dom";
-
 import TeamMember from "./TeamMember";
 import team1 from "assets/img/faces/jesse.jpg";
 import team2 from "assets/img/faces/farid.jpg";
@@ -109,72 +106,64 @@ class TeamSection extends React.Component {
           <Container>
             <GridContainer justify="center">
               <GridItem xs={12} sm={5} md={3}>
-                <Link to="/profile/farid">
-                  <TeamMember
-                    teamImage={team2}
-                    altTeamImage="Farid"
-                    title="Farid Hammouten"
-                    titleName="CEO & ADMIN"
-                    descriptionText="JavaScript Engineer based in Osaka. Big Dreamer and love
+                <TeamMember
+                  teamImage={team2}
+                  altTeamImage="Farid"
+                  title="Farid Hammouten"
+                  titleName="CEO & ADMIN"
+                  descriptionText="JavaScript Engineer based in Osaka. Big Dreamer and love
                       to exchange knowledge. Tech Stack: JavaScript, Node,
                       React, MongoDB, PHP and Rails"
-                    twitter="https://twitter.com/Faridh212"
-                    github="https://github.com/farid212"
-                    medium="https://medium.com/@farid212"
-                    linkedin="https://www.linkedin.com/in/farid212/"
-                    youtube="https://www.youtube.com/channel/UCNJ3Q0ikz6UMaM8bVp3fH5g"
-                  />
-                </Link>
+                  twitter="https://twitter.com/Faridh212"
+                  github="https://github.com/farid212"
+                  medium="https://medium.com/@farid212"
+                  linkedin="https://www.linkedin.com/in/farid212/"
+                  youtube="https://www.youtube.com/channel/UCNJ3Q0ikz6UMaM8bVp3fH5g"
+                  link="/profile/farid"
+                />
               </GridItem>
               <GridItem xs={12} sm={5} md={3}>
-                <a
-                  href="https://naturalclar.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <TeamMember
-                    teamImage={team1}
-                    title="Jesse Katsumata"
-                    altTeamImage="Jesse"
-                    titleName="Admin"
-                    descriptionText="Full Stack developer based in Tokyo. Strong believer in
+                <TeamMember
+                  teamImage={team1}
+                  title="Jesse Katsumata"
+                  altTeamImage="Jesse"
+                  titleName="Admin"
+                  descriptionText="Full Stack developer based in Tokyo. Strong believer in
                         the power of javascript. Tech Stack: React, React-Native,
                         Node, Electron, Mongo, Express"
-                    twitter="https://twitter.com/natural_clar"
-                    github="https://github.com/Naturalclar"
-                  />
-                </a>
+                  twitter="https://twitter.com/natural_clar"
+                  github="https://github.com/Naturalclar"
+                  hrefLink="https://naturalclar.dev/"
+                />
               </GridItem>
               <GridItem xs={12} sm={5} md={3}>
-                <Link to="/profile/dai">
-                  <TeamMember
-                    teamImage={team3}
-                    title="Dai Phan Tran"
-                    altTeamImage="Dai"
-                    titleName="Moderator"
-                    descriptionText="Open mind Web Designer based in France, love challenges
+                <TeamMember
+                  teamImage={team3}
+                  title="Dai Phan Tran"
+                  altTeamImage="Dai"
+                  titleName="Moderator"
+                  descriptionText="Open mind Web Designer based in France, love challenges
                         and meeting new people, believe that image is better than
                         word to express things."
-                    twitter="http://www.twitter.com/dai_webdesign"
-                    facebook="http://www.facebook.com/dai.webdesign"
-                  />
-                </Link>
+                  twitter="http://www.twitter.com/dai_webdesign"
+                  facebook="http://www.facebook.com/dai.webdesign"
+                  link="/profile/dai"
+                />
               </GridItem>
               <GridItem xs={12} sm={5} md={3}>
-                <Link to="/profile/oussama">
-                  <TeamMember
-                    teamImage={team4}
-                    altTeamImage="Oussama"
-                    title="Oussama Ladhari"
-                    titleName="Moderator"
-                    descriptionText="Junior full stack web developer based in Nara Japan.
+                <TeamMember
+                  teamImage={team4}
+                  altTeamImage="Oussama"
+                  title="Oussama Ladhari"
+                  titleName="Moderator"
+                  descriptionText="Junior full stack web developer based in Nara Japan.
                     Father of 2 lovely daughters.
                     Tech Stack: React, Python, Ruby, Django, Rails"
-                    linkedin="https://www.linkedin.com/in/oussama-ladhari/"
-                    github="https://github.com/oladhari"
-                    facebook="https://www.facebook.com/oussama.ladhari.9"
-                  />
-                </Link>
+                  linkedin="https://www.linkedin.com/in/oussama-ladhari/"
+                  github="https://github.com/oladhari"
+                  facebook="https://www.facebook.com/oussama.ladhari.9"
+                  link="/profile/oussama"
+                />
               </GridItem>
             </GridContainer>
           </Container>
