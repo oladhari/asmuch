@@ -1,97 +1,58 @@
-/*eslint-disable*/
+/*eslint-disable*/ 
 import React from "react";
-// react components for routing our app without refresh
 import { Link } from "react-router-dom";
 
-// @material-ui/core components
+// @MUI core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 
-// @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
-
-// core components
-import Button from "components/CustomButtons/Button.jsx";
-
-import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
-
-function HeaderLinks({ ...props }) {
-  const { classes } = props;
-  return (
-    <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="https://twitter.com/asmuchnantoka"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/asmuchnantoka"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="githup-tooltip"
-          title="follow us on github"
-          placement={window.innerWidth > 959 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://github.com/asmuch"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socials + " fab fa-github"} />
-          </Button>
-
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="meetup-tooltip"
-          title="Join our meetup group"
-          placement={window.innerWidth  > 959 ? "top" : "left"}
-          classes={{tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.meetup.com/As-much/"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socials + " fab fa-meetup"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-    </List>
-  );
+const headerLinkStyle = {
+    inlineBlock: {
+        display: "inline-block",
+        padding: "0px",
+        width: "auto"
+    },
+    block: {
+        color: "inherit",
+        padding: "0.9375rem",
+        fontWeight: "500",
+        fontSize: "12px",
+        textTransform: "uppercase",
+        borderRadius: "3px",
+        textDecoration: "none",
+        position: "relative",
+        display: "block"
+    },
+    list: {
+        marginBottom: "0",
+        padding: "0",
+        marginTop: "0"
+    },
 }
 
-export default withStyles(headerLinksStyle)(HeaderLinks);
+
+function HeaderLinks (props){
+    const { classes } = props;
+    return (
+        <List className={classes.list}>
+            <ListItem className={classes.inlineBlock}>
+                <Link to="/" className={classes.block}>
+                    HOME
+                </Link>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+                <Link to="/about" className={classes.block}>
+                    ABOUT US
+                </Link>
+            </ListItem>
+            <ListItem className={classes.inlineBlock}>
+                <Link to="/blog" className={classes.block}>
+                    BLOG
+                </Link>
+            </ListItem>
+        </List>
+    )
+};
+
+export default withStyles(headerLinkStyle)(HeaderLinks);

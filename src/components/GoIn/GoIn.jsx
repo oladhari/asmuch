@@ -49,7 +49,7 @@ const styles = theme => ({
     margin: theme.spacing.unit
   },
   input: {
-    display: "none"
+    // display: "none"
   }
 });
 

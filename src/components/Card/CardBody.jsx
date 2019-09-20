@@ -8,7 +8,12 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
 
 // core components
-import cardBodyStyle from "assets/jss/material-kit-react/components/cardBodyStyle";
+const cardBodyStyle = {
+  cardBody: {
+    padding: "0.9375rem 1.875rem",
+    flex: "1 1 auto"
+  }
+};
 
 function CardBody({ ...props }) {
   const { classes, className, children, ...rest } = props;
