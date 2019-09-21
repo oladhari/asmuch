@@ -11,8 +11,10 @@ import Favorite from "@material-ui/icons/Favorite";
 import Header from "../../../components/Header/Header.jsx";
 import Footer from "../../../components/Footer/Footer.jsx";
 import Button from "../../../components/CustomButtons/Button.jsx";
-import GridContainer from "../../../components/Grid/GridContainer.jsx";
-import GridItem from "../../../components/Grid/GridItem.jsx";
+import Grid from "@material-ui/core/Grid";
+import Container from "@material-ui/core/Container";
+// import GridContainer from "../../../components/Grid/GridContainer.jsx";
+// import GridItem from "../../../components/Grid/GridItem.jsx";
 import HeaderLinks from "../../../components/Header/HeaderLinks.jsx";
 import NavPills from "../../../components/NavPills/NavPills.jsx";
 import Parallax from "../../../components/Parallax/Parallax.jsx";
@@ -32,7 +34,8 @@ import work3 from "assets/img/examples/cynthia-del-rio.jpg";
 import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
-import { container, title } from "../../../assets/jss/material-kit-react.jsx";
+import { title } from "../../../assets/jss/material-kit-react.jsx";
+import theme from "assets/jss/material-kit-react/views/componentsSections/theme";
 
 const imagesStyle = {
   imgFluid: {
@@ -78,7 +81,9 @@ const imagesStyle = {
 };
 
 const profilePageStyle = {
-  container,
+  container: {
+    zIndex: "12"
+  },
   profile: {
     textAlign: "center",
     "& img": {
@@ -113,8 +118,12 @@ const profilePageStyle = {
     ...title,
     display: "inline-block",
     position: "relative",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "2rem"
+    },
     marginTop: "30px",
     minHeight: "32px",
+    color: "#FFFFFF",
     textDecoration: "none"
   },
   socials: {
@@ -187,31 +196,33 @@ class FaProfilePage extends React.Component {
             {...rest}
           />
         </Link>
-        <Parallax filter image={require("assets/img/farid-bg.jpg")}>
-          <div className={classes.container}>
-            <GridContainer>
-              <GridItem xs={12}>
-                <h2>I love this song</h2>
-              </GridItem>
-              <GridItem xs={12}>
-                <iframe
-                  title="Test"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/5C1Dfsur4CI?rel=0&amp;showinfo=0"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </GridItem>
-            </GridContainer>
-          </div>
+        <Parallax
+          filter
+          image={require("assets/img/cityhunter02.jpg")}
+          style={{ height: "80vh" }}
+        >
+          <Container maxWidth="sm" className={classes.container}>
+            <Grid item xs={12}>
+              <h2 className={classes.title}>I love this song</h2>
+            </Grid>
+            <Grid item xs={12}>
+              <iframe
+                title="Test"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/5C1Dfsur4CI?rel=0&amp;showinfo=0"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </Grid>
+          </Container>
         </Parallax>
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
             <div className={classes.container}>
-              <GridContainer justify="center">
-                <GridItem xs={12} sm={12} md={6}>
+              <Container maxWidth="sm">
+                <Grid item xs={12} md={12}>
                   <div className={classes.profile}>
                     <div>
                       <img src={profile} alt="..." className={imageClasses} />
@@ -282,8 +293,8 @@ class FaProfilePage extends React.Component {
                       </Button>
                     </div>
                   </div>
-                </GridItem>
-              </GridContainer>
+                </Grid>
+              </Container>
               <div className={classes.description}>
                 <p>
                   JavaScript Engineer based in Osaka. Big Dreamer and love to
@@ -291,8 +302,14 @@ class FaProfilePage extends React.Component {
                   Express & Mongo db.{" "}
                 </p>
               </div>
-              <GridContainer justify="center">
-                <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+              <Container>
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={8}
+                  className={classes.navWrapper}
+                >
                   <NavPills
                     alignCenter
                     color="primary"
@@ -301,8 +318,8 @@ class FaProfilePage extends React.Component {
                         tabButton: "Studio",
                         tabIcon: Camera,
                         tabContent: (
-                          <GridContainer justify="center">
-                            <GridItem xs={12} sm={12} md={4}>
+                          <Container>
+                            <Grid item xs={12} md={12}>
                               <img
                                 alt="..."
                                 src={studio1}
@@ -313,8 +330,8 @@ class FaProfilePage extends React.Component {
                                 src={studio2}
                                 className={navImageClasses}
                               />
-                            </GridItem>
-                            <GridItem xs={12} sm={12} md={4}>
+                            </Grid>
+                            <Grid item xs={12} md={12}>
                               <img
                                 alt="..."
                                 src={studio5}
@@ -325,16 +342,16 @@ class FaProfilePage extends React.Component {
                                 src={studio4}
                                 className={navImageClasses}
                               />
-                            </GridItem>
-                          </GridContainer>
+                            </Grid>
+                          </Container>
                         )
                       },
                       {
                         tabButton: "Work",
                         tabIcon: Palette,
                         tabContent: (
-                          <GridContainer justify="center">
-                            <GridItem xs={12} sm={12} md={4}>
+                          <Container>
+                            <Grid item xs={12} md={12}>
                               <img
                                 alt="..."
                                 src={work1}
@@ -350,8 +367,8 @@ class FaProfilePage extends React.Component {
                                 src={work3}
                                 className={navImageClasses}
                               />
-                            </GridItem>
-                            <GridItem xs={12} sm={12} md={4}>
+                            </Grid>
+                            <Grid item xs={12} md={12}>
                               <img
                                 alt="..."
                                 src={work4}
@@ -362,16 +379,16 @@ class FaProfilePage extends React.Component {
                                 src={work5}
                                 className={navImageClasses}
                               />
-                            </GridItem>
-                          </GridContainer>
+                            </Grid>
+                          </Container>
                         )
                       },
                       {
                         tabButton: "Favorite",
                         tabIcon: Favorite,
                         tabContent: (
-                          <GridContainer justify="center">
-                            <GridItem xs={12} sm={12} md={4}>
+                          <Container justify="center">
+                            <Grid item xs={12} md={12}>
                               <img
                                 alt="..."
                                 src={work4}
@@ -382,8 +399,8 @@ class FaProfilePage extends React.Component {
                                 src={studio3}
                                 className={navImageClasses}
                               />
-                            </GridItem>
-                            <GridItem xs={12} sm={12} md={4}>
+                            </Grid>
+                            <Grid item xs={12} md={12}>
                               <img
                                 alt="..."
                                 src={work2}
@@ -399,14 +416,14 @@ class FaProfilePage extends React.Component {
                                 src={studio1}
                                 className={navImageClasses}
                               />
-                            </GridItem>
-                          </GridContainer>
+                            </Grid>
+                          </Container>
                         )
                       }
                     ]}
                   />
-                </GridItem>
-              </GridContainer>
+                </Grid>
+              </Container>
             </div>
           </div>
         </div>
